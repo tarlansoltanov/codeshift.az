@@ -1,6 +1,283 @@
 {% extends 'base/layout.html' %}
 
+{% load static %}
 
 {% block content %}
-  <h1>Homepage</h1>
+  <!-- Hero Section -->
+  <section class="codeshift-hero-section pb-90 pt-80">
+    <div class="shape shape__1 position-absolute wow fadeInUp" data-wow-delay="300ms" data-wow-duration="800ms">
+      <img src="{% static 'assets/images/shapes/hero-shape-1.png' %}" alt="" />
+    </div>
+    <div class="shape shape__2 position-absolute wow fadeInUp" data-wow-delay="600ms" data-wow-duration="800ms">
+      <img src="{% static 'assets/images/shapes/hero-shape-2.png' %}" alt="" />
+    </div>
+    <div class="container">
+      <div class="row flex-lg-row flex-md-column-reverse">
+        <div class="col-xl-5 col-lg-5">
+          <div class="inner-content">
+            <h1 class="title wow fadeInUp" data-wow-delay="200ms" data-wow-duration="800ms">Professinal IT for private individuals and companies</h1>
+            <div class="inner-btns mt-50">
+              <a href="portfolio.html" class="codeshift-btn wow fadeInUp" data-wow-delay="500ms" data-wow-duration="800ms">Our Portfolio</a>
+            </div>
+            <div class="codeshift-social-links mt-140">
+              <a href="#0" class="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="800ms" target="_blank">
+                <i class="fab fa-facebook-f"></i> <span>Facebook</span>
+              </a>
+              <a href="#0" class="wow fadeInUp" data-wow-delay="800ms" data-wow-duration="800ms" target="_blank">
+                <i class="fab fa-instagram"></i> <span>Instagram</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-7 col-lg-7">
+          <div class="inner-right">
+            <div class="review-wrapper">
+              <div class="item">
+                <div class="icon">
+                  <img src="{% static 'assets/images/icons/growth.png' %}" alt="" />
+                </div>
+                <div class="content">
+                  <h6>100% Business Growth</h6>
+                  <p><i class="fas fa-star"></i> <span>4.9</span></p>
+                </div>
+              </div>
+              <div class="item">
+                <div class="content">
+                  <h6>40+ Happy Clients</h6>
+                  <p><i class="fas fa-star"></i> <span>4.9</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="img-wrapper wow zoomIn" data-wow-delay="700ms" data-wow-duration="800ms">
+              <img style="margin-bottom: 53px" src="{% static 'assets/images/hero/work.png' %}" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Section -->
+  <div class="codeshift-project-section pt-130 pb-130 theme-light-bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-4">
+          <div class="content-left-wrapper">
+            <div class="codeshift-section-heading">
+              <span class="sub-heading">RECENT PROJECTS</span>
+              <h2 class="heading mb-25">Our latest case studies</h2>
+              <p>Since 1997 we have been a visionary and a reliable software engineering partner for world-class brands.</p>
+            </div>
+            <ul class="codeshift-project-filter list-unstyled d-flex align-items-center mt-35">
+              <li class="active" data-filter=".cat-1">Management</li>
+              <li data-filter=".cat-2">Design</li>
+              <li data-filter=".cat-3">Ui/Ux Design</li>
+              <li data-filter=".cat-4">Business Consulting</li>
+              <li data-filter=".cat-5">Medical Industris</li>
+            </ul>
+            <a href="about.html" class="codeshift-btn mt-45">More Projects</a>
+          </div>
+        </div>
+        <div class="col-xl-8">
+          <div class="codeshift-project-wrapper">
+            <div class="row codeshift-project-grid mt-none-30">
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 cat-1 cat-4 cat-3 mt-30 grid">
+                <div class="codeshift-project-item">
+                  <div class="thumb">
+                    <img class="home-project-img" src="{% static 'assets/images/project/project-1.jpg' %}" alt="" />
+                  </div>
+                  <div class="content project-content">
+                    <h4 class="title"><a href="project-details.html">Speakers</a></h4>
+                    <span class="cat">Online Education Platform</span>
+                    <a href="project-details.html" class="inline-btn">
+                      <i class="far fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 cat-2 cat-4 cat-3 mt-30 grid">
+                <div class="codeshift-project-item">
+                  <div class="thumb">
+                    <img class="home-project-img" src="{% static 'assets/images/project/project-2.jpg' %}" alt="" />
+                  </div>
+                  <div class="content project-content">
+                    <h4 class="title"><a href="project-details.html">Backup Blockchain & Crypto</a></h4>
+                    <span class="cat">DATA SECURITY</span>
+                    <a href="project-details.html" class="inline-btn">
+                      <i class="far fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 cat-4 cat-2 cat-3 mt-30 grid">
+                <div class="codeshift-project-item">
+                  <div class="thumb">
+                    <img class="home-project-img" src="{% static 'assets/images/project/project-3.jpg' %}" alt="" />
+                  </div>
+                  <div class="content project-content">
+                    <h4 class="title"><a href="project-details.html">Backup Blockchain & Crypto</a></h4>
+                    <span class="cat">DATA SECURITY</span>
+                    <a href="project-details.html" class="inline-btn">
+                      <i class="far fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 cat-5 cat-4 cat-3 mt-30 grid">
+                <div class="codeshift-project-item">
+                  <div class="thumb project-content">
+                    <img class="home-project-img" src="{% static 'assets/images/project/project-4.jpg' %}" alt="" />
+                  </div>
+                  <div class="content project-content">
+                    <h4 class="title"><a href="project-details.html">Backup Blockchain & Crypto</a></h4>
+                    <span class="cat">DATA SECURITY</span>
+                    <a href="project-details.html" class="inline-btn">
+                      <i class="far fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Information Section -->
+  <div class="codeshift-card-section theme-light-bg pt-130">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="codeshift-card-wrapper d-flex justify-content-between align-items-center">
+            <div class="codeshift-card-box wow fadeInUp" data-wow-delay="00ms" data-wow-duration="800ms">
+              <div class="icon">
+                <img src="{% static 'assets/images/icons/card-icon-1.png' %}" alt="" />
+              </div>
+              <div class="content">
+                <h4 class="title">Cross-Industry Expertise</h4>
+              </div>
+              <div class="codeshift-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="codeshift-card-box codeshift-card-box__2 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="800ms">
+              <div class="icon">
+                <img src="{% static 'assets/images/icons/card-icon-2.png' %}" alt="" />
+              </div>
+              <div class="content">
+                <h4 class="title">Expertise & Leadership</h4>
+              </div>
+              <div class="codeshift-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="codeshift-card-box codeshift-card-box__3 wow fadeInUp" data-wow-delay="500ms" data-wow-duration="800ms">
+              <div class="icon">
+                <img src="{% static 'assets/images/icons/card-icon-3.png' %}" alt="" />
+              </div>
+              <div class="content">
+                <h4 class="title">Dedicate IT Solution</h4>
+              </div>
+              <div class="codeshift-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Brand Section -->
+  <div class="codeshift-brand-section pt-125 pb-130">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-xl-6">
+          <div class="codeshift-section-heading text-center mb-60">
+            <span class="sub-heading">we serve all industries</span>
+            <h2 class="heading">Top industries</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center mt-none-30">
+        <div class="col-xl-3 col-lg-4 col-md-6 mt-30">
+          <div class="codeshift-brand-box codeshift-brand-box__1 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="800ms">
+            <div class="icon">
+              <img src="{% static 'assets/images/icons/brand-icon-1.png' %}" alt="" />
+            </div>
+            <div class="content">
+              <h6 class="title">Travel & Tourism</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 mt-30">
+          <div class="codeshift-brand-box codeshift-brand-box__2 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="800ms">
+            <div class="icon">
+              <img src="{% static 'assets/images/icons/brand-icon-2.png' %}" alt="" />
+            </div>
+            <div class="content">
+              <h6 class="title">Industry & Finance</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 mt-30">
+          <div class="codeshift-brand-box codeshift-brand-box__3 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="800ms">
+            <div class="icon">
+              <img src="{% static 'assets/images/icons/brand-icon-3.png' %}" alt="" />
+            </div>
+            <div class="content">
+              <h6 class="title">Media & Entertainment</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 mt-30">
+          <div class="codeshift-brand-box codeshift-brand-box__4 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="800ms">
+            <div class="icon">
+              <img src="{% static 'assets/images/icons/brand-icon-4.png' %}" alt="" />
+            </div>
+            <div class="content">
+              <h6 class="title">Hotels & Restaurant</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 mt-30">
+          <div class="codeshift-brand-box codeshift-brand-box__5 wow fadeInUp" data-wow-delay="500ms" data-wow-duration="800ms">
+            <div class="icon">
+              <img src="{% static 'assets/images/icons/brand-icon-5.png' %}" alt="" />
+            </div>
+            <div class="content">
+              <h6 class="title">Healthcare Solution</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 mt-30">
+          <div class="codeshift-brand-box codeshift-brand-box__6 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="800ms">
+            <div class="icon">
+              <img src="{% static 'assets/images/icons/brand-icon-6.png' %}" alt="" />
+            </div>
+            <div class="content">
+              <h6 class="title">Elearning & Education</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 mt-30">
+          <div class="codeshift-brand-box codeshift-brand-box__7 wow fadeInUp" data-wow-delay="700ms" data-wow-duration="800ms">
+            <div class="icon">
+              <img src="{% static 'assets/images/icons/brand-icon-7.png' %}" alt="" />
+            </div>
+            <div class="content">
+              <h6 class="title">Web Development</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock content %}
