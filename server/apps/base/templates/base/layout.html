@@ -1,12 +1,288 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }} Page</title>
-</head>
-<body>
-  {% block content %}{% endblock content %}
-</body>
+<html class="no-js" lang="en">
+  <head>
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="author" content="CodeShift" />
+    <meta name="description" content="Technology & IT Solutions Service" />
+    <meta name="keywords" content="CodeShift, Technology & IT Solutions Service, Web Development" />
+
+    <!-- Title -->
+    <title>CodeShift - Technology & IT Solutions Service</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'assets/images/favicon/favicon.png' %}" type="images/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'assets/images/favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'assets/images/favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/images/favicon/favicon-16x16.png' %}">
+
+    <!-- Plugins -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/lightcase.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/meanmenu.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/nice-select.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/jquery-ui.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/ukit.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/odometer.min.css' %}" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+  </head>
+
+  <body>
+    <!-- Loader -->
+    <div id="codeshift-loading" class="codeshift-loader">
+      <div class="codeshift-spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="codeshift-header pt-50 pb-50" data-uk-sticky="top: 250; animation: uk-animation-slide-top;">
+      <div class="container-fluid codeshift-container__fluid">
+        <div class="row">
+          <div class="col-xl-10 col-lg-4 col-sm-6 col-7 align-self-center">
+            <div class="codeshift-logo-menu-wrapper">
+              <a href="{% url 'base:home' %}" class="codeshift-logo">
+                <img src="{% static 'assets/images/logo.png' %}" alt="LOGO" />
+              </a>
+              <div class="codeshift-menu-wrapper">
+                <div class="codeshift-main-menu">
+                  <nav id="codeshift-navbar">
+                    <ul>
+                      <li class=""><a href="{% url 'base:home' %}">Home</a></li>
+
+                      <li class="menu-item-has-children">
+                        <a href="portfolio.html">Portfolio</a>
+                        <ul class="sub-menu">
+                          <li><a href="project-details.html">Web Development</a></li>
+                          <li><a href="team.html">App Development</a></li>
+                          <li><a href="service-details.html">Design</a></li>
+                          <li><a href="team-details.html">Branding</a></li>
+                          <li><a href="portfolio.html">Digital Marketing</a></li>
+                        </ul>
+                      </li>
+
+                      <li><a href="about.html">About Us</a></li>
+                      <li class="menu-item-has-children">
+                        <a href="#">Language</a>
+                        <ul class="sub-menu">
+                          <li><a href="#">Azerbaijan</a></li>
+                          <li><a href="#">Enlish</a></li>
+                          <li><a href="#">Russian</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                <a href="contact.html" class="codeshift-btn">Contact</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-2 col-lg-8 col-sm-6 col-5 align-self-center">
+            <div class="right-element">
+              <ul class="list-unstyled d-flex align-items-center">
+                <li class="sideinfo-trigger" data-sideinfo-trigger>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Overlay -->
+    <div class="codeshift-overlay"></div>
+
+    <!-- Mobile Sidebar -->
+    <aside class="side-info-wrapper mm-only">
+      <nav>
+        <div class="nav" id="nav-tab" role="tablist">
+          <a class="nav-link active" id="menu-tab-1-tab" data-bs-toggle="tab" href="#menu-tab-1" role="tab" aria-controls="menu-tab-1" aria-selected="true">Menu</a>
+          <a class="nav-link" id="menu-tab-2-tab" data-bs-toggle="tab" href="#menu-tab-2" role="tab" aria-controls="menu-tab-2" aria-selected="false">Info</a>
+        </div>
+      </nav>
+      <div class="side-info__wrapper d-flex align-items-center justify-content-between">
+        <div class="side-info__logo">
+          <a href="{% url 'base:home' %}">
+            <img src="{% static 'assets/images/logo.png' %}" alt="logo" />
+          </a>
+        </div>
+        <div class="side-info__close">
+          <a href="javascript:void(0);"><i class="far fa-times"></i></a>
+        </div>
+      </div>
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="menu-tab-1" role="tabpanel" aria-labelledby="menu-tab-1-tab">
+          <div class="codeshift-mobile-menu"></div>
+        </div>
+        <div class="tab-pane fade" id="menu-tab-2" role="tabpanel" aria-labelledby="menu-tab-2-tab">
+          <div class="side-info">
+            <div class="side-info__content mb-35">
+              <h4 class="title mb-10">About us</h4>
+              <p>CodeShift is a leading provider of website and mobile app development services. We specialize in creating innovative and high-quality digital products that help businesses and organizations connect with their target audience.</p>
+              <a class="codeshift-btn codeshift-btn__small mt-20" href="contact.html">Contact us</a>
+            </div>
+            <div class="contact__info--wrapper mt-15">
+              <h4 class="title mb-15">Contact us</h4>
+              <ul class="contact__info list-unstyled">
+                <li>
+                  <span><i class="fas fa-map-marker-alt"></i></span>
+                  <p>Bowery St., New York, NY 10013, USA</p>
+                </li>
+                <li>
+                  <span><i class="fas fa-phone"></i></span>
+                  <p>+1255-568-6523</p>
+                </li>
+                <li>
+                  <span><i class="fas fa-envelope-open-text"></i></span>
+                  <p>information@gmail.com</p>
+                </li>
+              </ul>
+            </div>
+            <div class="codeshift-social-links mt-30">
+              <a href="#0"><i class="fab fa-facebook-f"></i></a>
+              <a href="#0"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Desktop Sidebar -->
+    <aside class="side-info-wrapper show-all">
+      <div class="side-info__wrapper d-flex align-items-center justify-content-between">
+        <div class="side-info__logo">
+          <a href="{% url 'base:home' %}">
+            <img src="{% static 'assets/images/logo.png' %}" alt="logo" />
+          </a>
+        </div>
+        <div class="side-info__close">
+          <a href="javascript:void(0);"><i class="far fa-times"></i></a>
+        </div>
+      </div>
+      <div class="side-info">
+        <div class="side-info__content mb-35">
+          <h4 class="title mb-10">About us</h4>
+          <p>CodeShift is a leading provider of website and mobile app development services. We specialize in creating innovative and high-quality digital products that help businesses and organizations connect with their target audience. Our team of experienced professionals is dedicated to delivering outstanding results and providing exceptional customer service.</p>
+          <a class="codeshift-btn codeshift-btn__small mt-20" href="contact.html">Contact us</a>
+        </div>
+        <div class="contact__info--wrapper mt-15">
+          <h4 class="title mb-15">Contact us</h4>
+          <ul class="contact__info list-unstyled">
+            <li>
+              <span><i class="fas fa-map-marker-alt"></i></span>
+              <p>Bowery St., New York, NY 10013, USA</p>
+            </li>
+            <li>
+              <span><i class="fas fa-phone"></i></span>
+              <p>+1255-568-6523</p>
+            </li>
+            <li>
+              <span><i class="fas fa-envelope-open-text"></i></span>
+              <p>information@gmail.com</p>
+            </li>
+          </ul>
+        </div>
+        <div class="codeshift-social-links mt-30">
+          <a href="#0"><i class="fab fa-facebook-f"></i></a>
+          <a href="#0"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </aside>
+
+    {% block content %}{% endblock content %}      
+
+    <!-- Footer -->
+    <footer class="codeshift-footer theme-light-bg pt-95">
+      <div class="codeshift-footer-widgets">
+        <div class="container">
+          <div class="row mt-none-30">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 codeshift-custom-col mt-30">
+              <div class="widget">
+                <div class="about-widget">
+                  <a href="{% url 'base:home' %}" class="codeshift-footer-logo mb-35">
+                    <img src="{% static 'assets/images/logo.png' %}" alt="" />
+                  </a>
+                  <p><i class="far fa-map-marker-alt"></i> 1791 Yorkshire Circle Kitty</p>
+                  <p><i class="far fa-envelope"></i> codeshiftinfo@gmail.com</p>
+                  <div class="codeshift-social-links mt-40">
+                    <a href="#0"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#0"><i class="fab fa-instagram"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 codeshift-custom-col mt-30">
+              <div class="widget">
+                <h3 class="widget-title">Services</h3>
+                <ul>
+                  <li><a href="service-details.html">Web Development</a></li>
+                  <li><a href="service-details.html">App Development</a></li>
+                  <li><a href="service-details.html">Design</a></li>
+                  <li><a href="service-details.html">Branding</a></li>
+                  <li><a href="service-details.html">Digital Marketing</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 codeshift-custom-col mt-30">
+              <div class="widget">
+                <h3 class="widget-title">Information</h3>
+                <ul>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="about.html">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="codeshift-copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <p>Copyright &copy; <span id="copyright-date"></span> CodeShift, All Rights Reserved.</p>
+            </div>
+            <div class="col-md-4">
+              <div class="codeshift-backtotop">
+                <button data-codeshift-backtotop><i class="far fa-angle-up"></i> Go On Top</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Plugins -->
+    <script src="{% static 'assets/js/jquery-2.2.4.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.meanmenu.min.js' %}"></script>
+    <script src="{% static 'assets/js/uikit.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'assets/js/lightcase.js' %}"></script>
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'assets/js/waypoint.js' %}"></script>
+    <script src="{% static 'assets/js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/js/js-jquery.knob.js' %}"></script>
+    <script src="{% static 'assets/js/js-jquery.appear.js' %}"></script>
+    <script src="{% static 'assets/js/odometer.min.js' %}"></script>
+    <script src="{% static 'assets/js/wow.min.js' %}"></script>
+
+    <!-- Main JS -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+  </body>
 </html>
