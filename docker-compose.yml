@@ -1,6 +1,18 @@
 version: "3"
 
 services:
+  db:
+    image: "postgres"
+    restart: always
+    volumes:
+      - pgdata:/var/lib/postgresql/data/
+    ports:
+      - 5432:5432
+    env_file:
+      - ./config/.env
+    networks:
+      - webdata
+
   web:
     image: "codeshift:dev"
     build:
@@ -17,7 +29,15 @@ services:
       - DJANGO_ENV=development
     ports:
       - 8000:8000
+    depends_on:
+      - db
+    networks:
+      - webdata
+
+networks:
+  webdata:
 
 volumes:
+  pgdata:
   static:
   media:
