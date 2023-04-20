@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+from server.settings.components import BASE_DIR
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -89,6 +91,10 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
+
+STATICFILES_DIRS = [
+    BASE_DIR.joinpath('static'),
+]
 
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
