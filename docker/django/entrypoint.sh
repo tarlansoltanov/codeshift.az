@@ -6,6 +6,12 @@ set -o pipefail
 
 readonly cmd="$*"
 
+# Cretate env file if not exists
+if [ ! -f ./config/.env ]; then
+    echo "Create .env file"
+    cp ./config/.env.template ./config/.env
+fi
+
 # Create Database migrations
 echo "Create database migration files"
 python manage.py makemigrations --noinput

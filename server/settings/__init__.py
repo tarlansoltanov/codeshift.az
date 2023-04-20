@@ -4,7 +4,8 @@ from .components import config
 ENV = config('DJANGO_ENV', default='local')
 
 base_settings = (
-    'components/common.py',
+    'components/common.py',         # Common settings
+    'components/database.py',       # Database settings
 
     # Select the right env if it exists:
     f'environments/{ENV}.py',
