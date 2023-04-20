@@ -10,8 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
-from server.settings.components import BASE_DIR
-
 # Application definition
 
 INSTALLED_APPS = [
