@@ -1,0 +1,201 @@
+{% extends 'base/layout.html' %} 
+
+{% load static %} 
+
+{% block content %}
+<!-- Breadcrumb -->
+<section class="breadcrumb-area fix theme-dark-bg bg_img">
+  <div class="small-shape small-shape__1">
+    <img src="{% static 'assets/images/shapes/small-shape-1.png' %}" alt="" />
+  </div>
+  <div class="small-shape small-shape__2">
+    <img src="{% static 'assets/images/shapes/small-shape-2.png' %}" alt="" />
+  </div>
+  <div class="small-shape small-shape__3">
+    <img src="{% static 'assets/images/shapes/small-shape-3.png' %}" alt="" />
+  </div>
+  <div class="small-shape small-shape__4">
+    <img src="{% static 'assets/images/shapes/small-shape-4.png' %}" alt="" />
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12">
+        <div class="codeshift-breadcrumb-wrapper position-relative pt-190 pb-190">
+          <h2 class="page-title">Project details</h2>
+          <div class="codeshift-breadcrumb breadcrumbs">
+            <ul class="list-unstyled d-flex align-items-center">
+              <li class="codeshift-item duxinbcrumb-begin">
+                <a href="{% url 'base:home' %}"><span>Home Page</span></a>
+              </li>
+              <li class="codeshift-item duxinbcrumb-end">
+                <span>Portfolio details </span>
+              </li>
+            </ul>
+          </div>
+          <div class="right-img">
+            <img src="{% static 'assets/images/bg/breadcrumb-bg.png' %}" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Project Details Section -->
+<div class="codeshift-details-page pt-130 pb-130">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12">
+        <div class="details-thumb mb-50">
+          <img src="{% static 'assets/images/project/project-2.jpg' %}" alt="" />
+        </div>
+        <div class="details-content">
+          <h2 class="codeshift-title mb-25">The new in upcoming design think..</h2>
+          <p>UX design refers to the term “user experience design”, while UI stands for “user interface design”. Both elements are crucial to a product and work closely together. But despite their professional relationship, the roles themselves are quite different, referring to very different aspects of the product development process and the design discipline.designers, business owners, and engineers face today are in a whole new level of scale compared to the challenges we’ve faced in the past few decades. In a largely globalised world,</p>
+          <div class="navigation-border pb-25"></div>
+          <ul class="list-unstyled portfolio-meta">
+            <li><span class="label">Client :</span> <span class="text">codeshift</span></li>
+            <li><span class="label">Website :</span> <span class="text">codeshift.com</span></li>
+            <li><span class="label">Category :</span> <span class="text">Design</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xl-12">
+        <div class="portfolio-details-carousel mt-45 owl-carousel" data-portfolio-details-carousel>
+          <!-- Item -->
+          <div class="portfolio-details-carousel__item">
+            <img class="portfolio-details-img" src="{% static 'assets/images/project/project-2.jpg' %}" alt="" />
+          </div>
+
+          <!-- Item -->
+          <div class="portfolio-details-carousel__item">
+            <img class="portfolio-details-img" src="{% static 'assets/images/project/project-1.jpg' %}" alt="" />
+          </div>
+
+          <!-- Item -->
+          <div class="portfolio-details-carousel__item">
+            <img class="portfolio-details-img" src="{% static 'assets/images/project/project-details-4.jpg' %}" alt="" />
+          </div>
+
+          <!-- Item -->
+          <div class="portfolio-details-carousel__item">
+            <img class="portfolio-details-img" src="{% static 'assets/images/project/project-details-2.jpg' %}" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-12 mt-90">
+        <h2 class="codeshift-title mb-25">Project requirement</h2>
+        <div class="row mt-none-15">
+          <div class="col-xl-6 mt-15">
+            <ul class="list-unstyled Language-list-item">
+              <li>
+                <img src="{% static 'assets/images/icons/double-arrow.png' %}" alt="" />
+                Existing user experience research–user personas, journeys
+              </li>
+              <li>
+                <img src="{% static 'assets/images/icons/double-arrow.png' %}" alt="" />
+                Usability testing existing products
+              </li>
+              <li>
+                <img src="{% static 'assets/images/icons/double-arrow.png' %}" alt="" />
+                Focus groups
+              </li>
+              <li>
+                <img src="{% static 'assets/images/icons/double-arrow.png' %}" alt="" />
+                Storyboards
+              </li>
+              <li>
+                <img src="{% static 'assets/images/icons/double-arrow.png' %}" alt="" />
+                Systems reviews
+              </li>
+            </ul>
+          </div>
+          <div class="col-xl-6 mt-15">
+            <ul class="list-unstyled Language-list-item">
+              <li>
+                <img src="{% static 'assets/images/icons/double-arrow.png' %}" alt="" />
+                User interviews
+              </li>
+              <li>
+                <img src="{% static 'assets/images/icons/double-arrow.png' %}" alt="" />
+                Usability testing existing products
+              </li>
+              <li>
+                <img src="{% static 'assets/images/icons/double-arrow.png' %}" alt="" />
+                Technical stakeholder interviews
+              </li>
+              <li>
+                <img src="{% static 'assets/images/icons/double-arrow.png' %}" alt="" />
+                Diary studies
+              </li>
+              <li>
+                <img src="{% static 'assets/images/icons/double-arrow.png' %}" alt="" />
+                Surveys
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="navigation-border mt-50"></div>
+        <div class="codeshift-next-prev-wrapper mt-50">
+          <a href="{% url 'portfolio:project' %}" class="codeshift-next-prev codeshift-next-prev__prev">
+            <span class="icon"><i class="far fa-arrow-left"></i></span><span class="text">Previous</span>
+          </a>
+          <a href="{% url 'portfolio:project' %}" class="codeshift-next-prev codeshift-next-prev__next">
+            <span class="text">Next</span><span class="icon"><i class="far fa-arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+      <div class="col-xl-12 mt-90">
+        <h2 class="codeshift-title mb-40">Our similar projects</h2>
+        <div class="codeshift-project-carousel owl-carousel codeshift-slide-nav codeshift-slide-nav__style-3" data-project-carousel>
+          <!-- Item -->
+          <div class="codeshift-project-item codeshift-project-item__style-2">
+            <div class="content">
+              <h4 class="title">
+                <a href="{% url 'portfolio:project' %}">Backup Blockchain & Crypto</a>
+              </h4>
+              <a href="{% url 'portfolio:project' %}" class="inline-btn">
+                <i class="far fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="thumb">
+              <img src="{% static 'assets/images/project/project-1.jpg' %}" alt="" />
+            </div>
+          </div>
+          
+          <!-- Item -->
+          <div class="codeshift-project-item codeshift-project-item__style-2">
+            <div class="content">
+              <h4 class="title">
+                <a href="{% url 'portfolio:project' %}">App Design For Local Agency</a>
+              </h4>
+              <a href="{% url 'portfolio:project' %}" class="inline-btn">
+                <i class="far fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="thumb">
+              <img src="{% static 'assets/images/project/project-2.jpg' %}" alt="" />
+            </div>
+          </div>
+
+          <!-- Item -->
+          <div class="codeshift-project-item codeshift-project-item__style-2">
+            <div class="content">
+              <h4 class="title">
+                <a href="{% url 'portfolio:project' %}">Backup Blockchain & Crypto</a>
+              </h4>
+              <a href="{% url 'portfolio:project' %}" class="inline-btn">
+                <i class="far fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="thumb">
+              <img src="{% static 'assets/images/project/project-2-1.jpg' %}" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
