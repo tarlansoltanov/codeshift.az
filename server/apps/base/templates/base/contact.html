@@ -1,0 +1,143 @@
+{% extends 'base/layout.html' %}
+
+{% load static %}
+
+{% block content %}
+  <!-- Breadcrumb -->
+  <section class="breadcrumb-area fix theme-dark-bg bg_img">
+    <div class="small-shape small-shape__1">
+      <img src="{% static 'assets/images/shapes/small-shape-1.png' %}" alt="" />
+    </div>
+    <div class="small-shape small-shape__2">
+      <img src="{% static 'assets/images/shapes/small-shape-2.png' %}" alt="" />
+    </div>
+    <div class="small-shape small-shape__3">
+      <img src="{% static 'assets/images/shapes/small-shape-3.png' %}" alt="" />
+    </div>
+    <div class="small-shape small-shape__4">
+      <img src="{% static 'assets/images/shapes/small-shape-4.png' %}" alt="" />
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="codeshift-breadcrumb-wrapper position-relative pt-190 pb-190">
+            <h2 class="page-title">Contact us</h2>
+            <div class="codeshift-breadcrumb breadcrumbs">
+              <ul class="list-unstyled d-flex align-items-center">
+                <li class="codeshift-item duxinbcrumb-begin">
+                  <a href="{% url 'base:home' %}"><span>Home Page</span></a>
+                </li>
+                <li class="codeshift-item duxinbcrumb-end">
+                  <span>Contact us</span>
+                </li>
+              </ul>
+            </div>
+            <div class="right-img">
+              <img src="{% static 'assets/images/bg/breadcrumb-bg.png' %}" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Support Section -->
+  <div class="stocox-support-secttion pt-130 pb-130">
+    <div class="container">
+      <div class="row mt-none-30">
+        <div class="col-lg-4 col-md-6 mt-30">
+          <div class="stocox-support-box wow fadeInUp" data-wow-delay="00ms" data-wow-duration="800ms">
+            <div class="icon">
+              <img src="{% static 'assets/images/icons/support-1.png' %}" alt="" />
+            </div>
+            <div class="content mt-25">
+              <h4 class="title">Visit Us Daily</h4>
+              <p>
+                1791 Yorkshire Circle KittyNY <br />
+                10002,USA
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mt-30">
+          <div class="stocox-support-box wow fadeInUp" data-wow-delay="200ms" data-wow-duration="800ms">
+            <div class="icon">
+              <img src="{% static 'assets/images/icons/support-2.png' %}" alt="" />
+            </div>
+            <div class="content mt-25">
+              <h4 class="title">Contact Us</h4>
+              <p>
+                <a href="tel:1008-345-6789">+ 1 008-345-6789</a>
+                <a href="tel:1800-789-4561">+1 800-789-4561</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mt-30">
+          <div class="stocox-support-box wow fadeInUp" data-wow-delay="400ms" data-wow-duration="800ms">
+            <div class="icon">
+              <img src="{% static 'assets/images/icons/support-3.png' %}" alt="" />
+            </div>
+            <div class="content mt-25">
+              <h4 class="title">Email Us</h4>
+              <p>
+                <a href="mailto:codeshiftinfo@example.com">codeshiftinfo@example.com</a>
+                <a href="mailto:Webyourinfo@gmail.com">Webyourinfo@gmail.com</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Get Quote Section -->
+  <section class="codeshift-getquote-section pb-130">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-xl-8">
+          <div class="codeshift-section-heading codeshift-section-heading__style-2 text-center mb-60">
+            <span class="sub-heading">Get free quote</span>
+            <h2 class="heading">Just have a quick any questions?</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row g-0">
+        <div class="col-xl-6">
+          <div class="img-wrapper">
+            <img src="{% static 'assets/images/bg/quote.jpg' %}" alt="" />
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <div class="codeshift-getquote-form-wrapper">
+            <form method="POST" id="contact-form">
+              <div class="codeshift-input-field mt-30">
+                <label for="name">Full Name *</label>
+                <input type="text" name="name" id="name" placeholder="Devon Lane" />
+              </div>
+              <div class="codeshift-input-field mt-30">
+                <label for="Number">Number *</label>
+                <input type="text" name="Number" id="Number" placeholder="+994" />
+              </div>
+
+              <div class="codeshift-input-field mt-30">
+                <label for="email">Email *</label>
+                <input type="email" name="email" id="email" placeholder="jackson.graham@example.com" />
+              </div>
+              <div class="codeshift-input-field mt-30">
+                <label for="subject">Subject *</label>
+                <input type="text" name="subject" id="subject" placeholder="Web,Mobile App..." />
+              </div>
+              <div class="codeshift-input-field mt-30">
+                <label for="message">Message *</label>
+                <textarea name="message" id="message" placeholder="Details of project"></textarea>
+              </div>
+              <button type="submit" class="codeshift-btn codeshift-btn__round mt-20">Submit Now</button>
+              <p class="ajax-response"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock content %}
