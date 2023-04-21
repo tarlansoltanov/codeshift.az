@@ -1,0 +1,208 @@
+{% extends 'base/layout.html' %}
+
+{% load static %}
+
+{% block content %}
+  <!-- Breadcrumb -->
+  <section class="breadcrumb-area fix theme-dark-bg bg_img">
+    <div class="small-shape small-shape__1">
+      <img src="{% static 'assets/images/shapes/small-shape-1.png' %}" alt="" />
+    </div>
+    <div class="small-shape small-shape__2">
+      <img src="{% static 'assets/images/shapes/small-shape-2.png' %}" alt="" />
+    </div>
+    <div class="small-shape small-shape__3">
+      <img src="{% static 'assets/images/shapes/small-shape-3.png' %}" alt="" />
+    </div>
+    <div class="small-shape small-shape__4">
+      <img src="{% static 'assets/images/shapes/small-shape-4.png' %}" alt="" />
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="codeshift-breadcrumb-wrapper position-relative pt-190 pb-190">
+            <h2 class="page-title">About CodeShift</h2>
+            <div class="codeshift-breadcrumb breadcrumbs">
+              <ul class="list-unstyled d-flex align-items-center">
+                <li class="codeshift-item duxinbcrumb-begin">
+                  <a href="{% url 'base:home' %}"><span>Home Page</span></a>
+                </li>
+                <li class="codeshift-item duxinbcrumb-end">
+                  <span>About us</span>
+                </li>
+              </ul>
+            </div>
+            <div class="right-img">
+              <img src="{% static 'assets/images/bg/breadcrumb-bg.png' %}" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <div class="codeshift-about-section codeshift-about-section__style-2 pt-125 pb-130">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-6">
+          <div class="codeshift-section-heading codeshift-section-heading__style-2">
+            <span class="sub-heading">ABOUT US</span>
+            <h2 class="heading">We provide flexible services</h2>
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <div class="abt-desc">
+            <p>CodeShift is a leading provider of website and mobile app development services. We specialize in creating innovative and high-quality digital products that help businesses and organizations connect with their target audience. Our team of experienced professionals is dedicated to delivering outstanding results and providing exceptional customer service.</p>
+          </div>
+        </div>
+        <div class="col-xl-12">
+          <div class="codeshift-video-img mt-75">
+            <div class="thumb">
+              <img src="{% static 'assets/images/bg/about-bg-1.jpg' %}" alt="" />
+            </div>
+            <a href="http://youtube.com/embed/4xe72U7mXNg?rel=0&amp;controls=0&amp;showinfo=0" data-rel="lightcase" class="codeshift-video-btn">
+              <i class="fas fa-play"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mission Section -->
+  <div class="codeshift-mission-section mb-5">
+    <div class="container">
+      <div class="row mt-none-30">
+        <div class="col-xl-4 col-lg-6 col-md-6 mt-30">
+          <div class="codeshift-mission-box wow fadeInUp" data-wow-delay="00ms" data-wow-duration="800ms">
+            <div class="icon icon__1">
+              <img src="{% static 'assets/images/icons/mission-1.png' %}" alt="" />
+            </div>
+            <div class="content mt-25">
+              <h2 class="title">Our History</h2>
+              <p>Since 2015 we have been a visionary and a reliable software engineering partner for world-class brands.At CodeShift, we understand that every project is unique, and we take a personalized approach to ensure that each client receives the attention and support they deserve. From concept to launch, we are there every step of the way, providing guidance and support to help bring your vision to life.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-6 col-md-6 mt-30">
+          <div class="codeshift-mission-box wow fadeInUp" data-wow-delay="200ms" data-wow-duration="800ms">
+            <div class="icon icon__2">
+              <img src="{% static 'assets/images/icons/mission-2.png' %}" alt="" />
+            </div>
+            <div class="content mt-25">
+              <h2 class="title">Our mission</h2>
+              <p>Our mission is to help our clients succeed in the digital world. We understand the importance of a strong online presence and the role that websites and mobile apps play in connecting with customers and achieving business goals. That's why we work closely with our clients to understand their unique needs and goals, and then design and develop custom solutions that meet those needs.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-6 col-md-6 mt-30">
+          <div class="codeshift-mission-box wow fadeInUp" data-wow-delay="400ms" data-wow-duration="800ms">
+            <div class="icon icon__3">
+              <img src="{% static 'assets/images/icons/mission-3.png' %}" alt="" />
+            </div>
+            <div class="content mt-25">
+              <h2 class="title">Our vission</h2>
+              <p>We take pride in our ability to deliver cutting-edge technology combined with outstanding design. Our portfolio includes a range of projects from simple brochure websites to complex custom software solutions. Our expertise in a wide range of industries and technologies allows us to deliver results that make a real impact for our clients.We believe that the key to success lies in a combination of technical expertise and creative problem-solving</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Achivement Section -->
+  <div class="codeshift-achivement-section theme-light-bg pt-130 pb-130">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-4 col-lg-10 col-md-12 align-self-center">
+          <div class="codeshift-section-heading codeshift-section-heading__style-2">
+            <span class="sub-heading">achievement</span>
+            <h2 class="heading mb-20">Some number of our achivement</h2>
+            <div class="stocox-faq-wrapper faq__wrapper"></div>
+          </div>
+        </div>
+        <div class="col-xl-8">
+          <div class="codeshift-achivement-boxs codeshift-achivement-boxs__style-2 ml-100">
+            <div class="box-item box-item__style-2 active">
+              <div class="icon">
+                <img src="{% static 'assets/images/icons/achivement-2.png' %}" alt="" />
+              </div>
+              <div class="content">
+                <h2 class="title d-flex align-items-end justify-content-center mt-30">
+                  <span class="odometer" data-count="40+">00</span>
+                  <span class="sign">+</span>
+                </h2>
+                <p>Satisfied Clients</p>
+              </div>
+              <div class="shape"><img src="{% static 'assets/images/shapes/achivement-shape.png' %}" alt="" /></div>
+            </div>
+            <div class="box-item box-item__style-2">
+              <div class="icon">
+                <img src="{% static 'assets/images/icons/achivement-1.png' %}" alt="" />
+              </div>
+              <div class="content">
+                <h2 class="title d-flex align-items-end justify-content-center mt-30">
+                  <span class="odometer" data-count="50+">00</span>
+                  <span class="sign">+</span>
+                </h2>
+                <p>Project Completed</p>
+              </div>
+            </div>
+            <div class="box-item box-item__style-2">
+              <div class="icon">
+                <img src="{% static 'assets/images/icons/achivement-3.png' %}" alt="" />
+              </div>
+              <div class="content">
+                <h2 class="title d-flex align-items-end justify-content-center mt-30">
+                  <span class="odometer" data-count="80">00</span>
+                  <span class="sign">+</span>
+                </h2>
+                <p>Bands Joined</p>
+              </div>
+            </div>
+            <div class="box-item box-item__style-2">
+              <div class="icon">
+                <img src="{% static 'assets/images/icons/achivement-4.png' %}" alt="" />
+              </div>
+              <div class="content">
+                <h2 class="title d-flex align-items-end justify-content-center mt-30">
+                  <span class="odometer" data-count="10">00</span>
+                  <span class="sign">+</span>
+                </h2>
+                <p>Team Member</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WCU Section -->
+  <div class="codeshift-about-section codeshift-about-section__style-2 pt-130 pb-130">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-6">
+          <div class="codeshift-section-heading codeshift-section-heading__style-2">
+            <span class="sub-heading">why choose us</span>
+            <h2 class="heading">Custom IT solutions <br />for your business</h2>
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <div class="abt-desc">
+            <p>At CodeShift, we believe that our clients' success is our success. That's why we approach every project with a focus on delivering value, and we're committed to building long-lasting relationships with our clients. Whether you're looking to launch a new website or mobile app, or you're looking to improve your existing digital products, we're here to help.</p>
+          </div>
+        </div>
+        <div class="col-xl-12">
+          <div class="codeshift-video-img mt-75">
+            <div class="thumb">
+              <img src="{% static 'assets/images/bg/about-bg-2.jpg' %}" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}
+   
