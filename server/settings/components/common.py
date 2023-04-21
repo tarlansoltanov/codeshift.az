@@ -17,6 +17,7 @@ from server.settings.components import BASE_DIR
 INSTALLED_APPS = [
     # Local apps
     'server.apps.base.apps.BaseConfig',
+    'server.apps.portfolio.apps.PortfolioConfig',
 
     # Django apps
     'django.contrib.admin',
