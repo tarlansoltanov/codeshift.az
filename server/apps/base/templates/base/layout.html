@@ -140,21 +140,21 @@
               <ul class="contact__info list-unstyled">
                 <li>
                   <span><i class="fas fa-map-marker-alt"></i></span>
-                  <p>Bowery St., New York, NY 10013, USA</p>
+                  <p>{{ address }}</p>
                 </li>
                 <li>
                   <span><i class="fas fa-phone"></i></span>
-                  <p>+1255-568-6523</p>
+                  <p>{{ phone }}</p>
                 </li>
                 <li>
                   <span><i class="fas fa-envelope-open-text"></i></span>
-                  <p>information@gmail.com</p>
+                  <p>{{ email }}</p>
                 </li>
               </ul>
             </div>
             <div class="codeshift-social-links mt-30">
-              <a href="#0"><i class="fab fa-facebook-f"></i></a>
-              <a href="#0"><i class="fab fa-instagram"></i></a>
+              <a href="{{ facebook }}"><i class="fab fa-facebook-f"></i></a>
+              <a href="{{ instagram }}"><i class="fab fa-instagram"></i></a>
             </div>
           </div>
         </div>
@@ -184,21 +184,21 @@
           <ul class="contact__info list-unstyled">
             <li>
               <span><i class="fas fa-map-marker-alt"></i></span>
-              <p>Bowery St., New York, NY 10013, USA</p>
+              <p>{{ address }}</p>
             </li>
             <li>
               <span><i class="fas fa-phone"></i></span>
-              <p>+1255-568-6523</p>
+              <p>{{ phone }}</p>
             </li>
             <li>
               <span><i class="fas fa-envelope-open-text"></i></span>
-              <p>information@gmail.com</p>
+              <p>{{ email }}</p>
             </li>
           </ul>
         </div>
         <div class="codeshift-social-links mt-30">
-          <a href="#0"><i class="fab fa-facebook-f"></i></a>
-          <a href="#0"><i class="fab fa-instagram"></i></a>
+          <a href="{{ facebook }}"><i class="fab fa-facebook-f"></i></a>
+          <a href="{{ instagram }}"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
     </aside>
@@ -216,11 +216,11 @@
                   <a href="{% url 'base:home' %}" class="codeshift-footer-logo mb-35">
                     <img src="{% static 'assets/images/logo.png' %}" alt="" />
                   </a>
-                  <p><i class="far fa-map-marker-alt"></i> 1791 Yorkshire Circle Kitty</p>
-                  <p><i class="far fa-envelope"></i> codeshiftinfo@gmail.com</p>
+                  <p><i class="far fa-map-marker-alt"></i> {{ address }}</p>
+                  <p><i class="far fa-envelope"></i> {{ email }}</p>
                   <div class="codeshift-social-links mt-40">
-                    <a href="#0"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#0"><i class="fab fa-instagram"></i></a>
+                    <a href="{{ facebook }}"><i class="fab fa-facebook-f"></i></a>
+                    <a href="{{ instagram }}"><i class="fab fa-instagram"></i></a>
                   </div>
                 </div>
               </div>
