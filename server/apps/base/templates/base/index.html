@@ -74,68 +74,29 @@
                 <li data-filter=".cat-{{ category.id }}">{{ category.name }}</li>
               {% endfor %}
             </ul>
-            <a href="about.html" class="codeshift-btn mt-45">More Projects</a>
+            <a href="{% url 'portfolio:index' %}" class="codeshift-btn mt-45">More Projects</a>
           </div>
         </div>
         <div class="col-xl-8">
           <div class="codeshift-project-wrapper">
             <div class="row codeshift-project-grid mt-none-30">
-              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 cat-1 cat-4 cat-3 mt-30 grid">
-                <div class="codeshift-project-item">
-                  <div class="thumb">
-                    <img class="home-project-img" src="{% static 'assets/images/project/project-1.jpg' %}" alt="" />
-                  </div>
-                  <div class="content project-content">
-                    <h4 class="title"><a href="{% url 'portfolio:project' %}">Speakers</a></h4>
-                    <span class="cat">Online Education Platform</span>
-                    <a href="{% url 'portfolio:project' %}" class="inline-btn">
-                      <i class="far fa-arrow-right"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 cat-2 cat-4 cat-3 mt-30 grid">
-                <div class="codeshift-project-item">
-                  <div class="thumb">
-                    <img class="home-project-img" src="{% static 'assets/images/project/project-2.jpg' %}" alt="" />
-                  </div>
-                  <div class="content project-content">
-                    <h4 class="title"><a href="{% url 'portfolio:project' %}">Backup Blockchain & Crypto</a></h4>
-                    <span class="cat">DATA SECURITY</span>
-                    <a href="{% url 'portfolio:project' %}" class="inline-btn">
-                      <i class="far fa-arrow-right"></i>
-                    </a>
+              {% for item in projects %}
+                <!-- Item -->
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 cat-{{ item.category.id }} mt-30 grid">
+                  <div class="codeshift-project-item">
+                    <div class="thumb">
+                      <img class="home-project-img" src="{{ item.image.url }}" alt="" />
+                    </div>
+                    <div class="content project-content">
+                      <h4 class="title"><a href="{% url 'portfolio:project' pk=item.id %}">{{ item.name }}</a></h4>
+                      <span class="cat">{{ item.title }}</span>
+                      <a href="{% url 'portfolio:project' pk=item.id %}" class="inline-btn">
+                        <i class="far fa-arrow-right"></i>
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 cat-4 cat-2 cat-3 mt-30 grid">
-                <div class="codeshift-project-item">
-                  <div class="thumb">
-                    <img class="home-project-img" src="{% static 'assets/images/project/project-3.jpg' %}" alt="" />
-                  </div>
-                  <div class="content project-content">
-                    <h4 class="title"><a href="{% url 'portfolio:project' %}">Backup Blockchain & Crypto</a></h4>
-                    <span class="cat">DATA SECURITY</span>
-                    <a href="{% url 'portfolio:project' %}" class="inline-btn">
-                      <i class="far fa-arrow-right"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 cat-5 cat-4 cat-3 mt-30 grid">
-                <div class="codeshift-project-item">
-                  <div class="thumb project-content">
-                    <img class="home-project-img" src="{% static 'assets/images/project/project-4.jpg' %}" alt="" />
-                  </div>
-                  <div class="content project-content">
-                    <h4 class="title"><a href="{% url 'portfolio:project' %}">Backup Blockchain & Crypto</a></h4>
-                    <span class="cat">DATA SECURITY</span>
-                    <a href="{% url 'portfolio:project' %}" class="inline-btn">
-                      <i class="far fa-arrow-right"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
+              {% endfor %}
             </div>
           </div>
         </div>

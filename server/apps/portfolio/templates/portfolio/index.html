@@ -66,84 +66,21 @@
       <div class="col-xl-12">
         <div class="codeshift-project-wrapper mt-50">
           <div class="row codeshift-project-grid mt-none-30">
-            <div class="col-xl-6 col-lg-6 cat-1 cat-4 cat-3 mt-30 grid">
+            {% for project in projects %}
+            <div class="col-xl-6 col-lg-6 cat-{{ project.category.id }} mt-30 grid">
               <div class="codeshift-project-item codeshift-project-item__style-2">
                 <div class="content">
-                  <h4 class="title"><a href="{% url 'portfolio:project' %}">Speakers</a></h4>
-                  <a href="{% url 'portfolio:project' %}" class="inline-btn">
+                  <h4 class="title"><a href="{% url 'portfolio:project' pk=project.id %}">{{ project.name }}</a></h4>
+                  <a href="{% url 'portfolio:project' pk=project.id %}" class="inline-btn">
                     <i class="far fa-arrow-right"></i>
                   </a>
                 </div>
                 <div class="thumb">
-                  <img src="{% static 'assets/images/project/project-1.jpg' %}" alt="" />
+                  <img src="{{ project.image.url }}" alt="" />
                 </div>
               </div>
             </div>
-            <div class="col-xl-6 col-lg-6 cat-2 cat-4 cat-3 mt-30 grid">
-              <div class="codeshift-project-item codeshift-project-item__style-2">
-                <div class="content">
-                  <h4 class="title"><a href="{% url 'portfolio:project' %}">SartoriMonteroda</a></h4>
-                  <a href="{% url 'portfolio:project' %}" class="inline-btn">
-                    <i class="far fa-arrow-right"></i>
-                  </a>
-                </div>
-                <div class="thumb">
-                  <img src="{% static 'assets/images/project/project-2.jpg' %}" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-6 col-lg-6 cat-4 cat-1 cat-3 mt-30 grid">
-              <div class="codeshift-project-item codeshift-project-item__style-2">
-                <div class="content">
-                  <h4 class="title"><a href="{% url 'portfolio:project' %}">The New In Upcoming Design Think?</a></h4>
-                  <a href="{% url 'portfolio:project' %}" class="inline-btn">
-                    <i class="far fa-arrow-right"></i>
-                  </a>
-                </div>
-                <div class="thumb">
-                  <img src="{% static 'assets/images/project/project-2-3.jpg' %}" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-6 col-lg-6 cat-4 cat-3 mt-30 grid">
-              <div class="codeshift-project-item codeshift-project-item__style-2">
-                <div class="content">
-                  <h4 class="title"><a href="{% url 'portfolio:project' %}">Branding For American IT..</a></h4>
-                  <a href="{% url 'portfolio:project' %}" class="inline-btn">
-                    <i class="far fa-arrow-right"></i>
-                  </a>
-                </div>
-                <div class="thumb">
-                  <img src="{% static 'assets/images/project/project-2-4.jpg' %}" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-6 col-lg-6 cat-2 cat-3 mt-30 grid">
-              <div class="codeshift-project-item codeshift-project-item__style-2">
-                <div class="content">
-                  <h4 class="title"><a href="{% url 'portfolio:project' %}">World Best Available Scope..</a></h4>
-                  <a href="{% url 'portfolio:project' %}" class="inline-btn">
-                    <i class="far fa-arrow-right"></i>
-                  </a>
-                </div>
-                <div class="thumb">
-                  <img src="{% static 'assets/images/project/project-2-5.jpg' %}" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-6 col-lg-6 cat-5 cat-4 cat-3 mt-30 grid">
-              <div class="codeshift-project-item codeshift-project-item__style-2">
-                <div class="content">
-                  <h4 class="title"><a href="{% url 'portfolio:project' %}">Software License Management..</a></h4>
-                  <a href="{% url 'portfolio:project' %}" class="inline-btn">
-                    <i class="far fa-arrow-right"></i>
-                  </a>
-                </div>
-                <div class="thumb">
-                  <img src="{% static 'assets/images/project/project-2-6.jpg' %}" alt="" />
-                </div>
-              </div>
-            </div>
+            {% endfor %}
           </div>
         </div>
       </div>

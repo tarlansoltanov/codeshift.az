@@ -5,5 +5,5 @@ app_name = 'server.apps.portfolio'
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('project/', views.project, name='project'),
+    path('<int:pk>/', views.project, name='project'),
 ]

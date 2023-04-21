@@ -20,6 +20,19 @@ class Project(models.Model):
     def __str__(self):
         """Unicode representation of Project."""
         return f'{self.name}'
+    
+    def image(self):
+        return self.images.first().image
+    
+    def previous(self):
+        if self.pk == Project.objects.first().pk:
+            return None
+        return Project.objects.filter(pk__lt=self.pk).last()
+    
+    def next(self):
+        if self.pk == Project.objects.last().pk:
+            return None
+        return Project.objects.filter(pk__gt=self.pk).first()
 
 
 class ProjectImage(models.Model):

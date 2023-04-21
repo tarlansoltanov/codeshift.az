@@ -1,8 +1,12 @@
 from django.shortcuts import render
+from ..portfolio.models import Project
 
 
 def home(request, template_name='base/index.html', context={}):
     context['title'] = 'Home'
+
+    context['projects'] = Project.objects.all()[:4]
+
     return render(request, template_name, context)
 
 
