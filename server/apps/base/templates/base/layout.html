@@ -64,11 +64,11 @@
                       <li class="menu-item-has-children">
                         <a href="{% url 'portfolio:index' %}">Portfolio</a>
                         <ul class="sub-menu">
-                          <li><a href="{% url 'portfolio:project' %}">Web Development</a></li>
-                          <li><a href="{% url 'portfolio:project' %}">App Development</a></li>
-                          <li><a href="{% url 'portfolio:project' %}">Design</a></li>
-                          <li><a href="{% url 'portfolio:project' %}">Branding</a></li>
-                          <li><a href="{% url 'portfolio:project' %}">Digital Marketing</a></li>
+                          {% for category in categories %}
+                            <li>
+                              <a href="{% url 'portfolio:index' %}?category={{ category.id }}">{{ category.name }}</a>
+                            </li>
+                          {% endfor %}
                         </ul>
                       </li>
 
@@ -229,11 +229,11 @@
               <div class="widget">
                 <h3 class="widget-title">Services</h3>
                 <ul>
-                  <li><a href="service-details.html">Web Development</a></li>
-                  <li><a href="service-details.html">App Development</a></li>
-                  <li><a href="service-details.html">Design</a></li>
-                  <li><a href="service-details.html">Branding</a></li>
-                  <li><a href="service-details.html">Digital Marketing</a></li>
+                  {% for category in categories %}
+                    <li>
+                      <a href="{% url 'portfolio:index' %}?category={{ category.id }}">{{ category.name }}</a>
+                    </li>
+                  {% endfor %}
                 </ul>
               </div>
             </div>

@@ -48,6 +48,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'server.apps.base.context_processors.contact_details',
+                'server.apps.portfolio.context_processors.categories',
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',

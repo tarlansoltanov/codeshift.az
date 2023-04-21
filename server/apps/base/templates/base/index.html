@@ -69,11 +69,10 @@
               <p>Since 1997 we have been a visionary and a reliable software engineering partner for world-class brands.</p>
             </div>
             <ul class="codeshift-project-filter list-unstyled d-flex align-items-center mt-35">
-              <li class="active" data-filter=".cat-1">Management</li>
-              <li data-filter=".cat-2">Design</li>
-              <li data-filter=".cat-3">Ui/Ux Design</li>
-              <li data-filter=".cat-4">Business Consulting</li>
-              <li data-filter=".cat-5">Medical Industris</li>
+              <li class="active" data-filter="">All</li>
+              {% for category in categories %}
+                <li data-filter=".cat-{{ category.id }}">{{ category.name }}</li>
+              {% endfor %}
             </ul>
             <a href="about.html" class="codeshift-btn mt-45">More Projects</a>
           </div>
