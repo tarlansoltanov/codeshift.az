@@ -18,10 +18,12 @@ from django.contrib import admin
 from django.urls import path, include
 
 from server.apps.base import urls as base_urls
+from server.apps.portfolio import urls as portfolio_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(base_urls, namespace='base')),
+    path('portfolio/', include(portfolio_urls, namespace='portfolio')),
 ]
 
 from django.conf import settings

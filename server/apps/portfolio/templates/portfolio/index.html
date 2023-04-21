@@ -1,0 +1,156 @@
+{% extends 'base/layout.html' %} 
+
+{% load static %} 
+
+{% block content %}
+<!-- Breadcrumb -->
+<section class="breadcrumb-area fix theme-dark-bg bg_img">
+  <div class="small-shape small-shape__1">
+    <img src="{% static 'assets/images/shapes/small-shape-1.png' %}" alt="" />
+  </div>
+  <div class="small-shape small-shape__2">
+    <img src="{% static 'assets/images/shapes/small-shape-2.png' %}" alt="" />
+  </div>
+  <div class="small-shape small-shape__3">
+    <img src="{% static 'assets/images/shapes/small-shape-3.png' %}" alt="" />
+  </div>
+  <div class="small-shape small-shape__4">
+    <img src="{% static 'assets/images/shapes/small-shape-4.png' %}" alt="" />
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12">
+        <div class="codeshift-breadcrumb-wrapper position-relative pt-190 pb-190">
+          <h2 class="page-title">Portfolio</h2>
+          <div class="codeshift-breadcrumb breadcrumbs">
+            <ul class="list-unstyled d-flex align-items-center">
+              <li class="codeshift-item duxinbcrumb-begin">
+                <a href="{% url 'base:home' %}"><span>Home Page</span></a>
+              </li>
+              <li class="codeshift-item duxinbcrumb-end">
+                <span>Portfolio </span>
+              </li>
+            </ul>
+          </div>
+          <div class="right-img">
+            <img src="{% static 'assets/images/bg/breadcrumb-bg.png' %}" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<div class="codeshift-project-section codeshift-project-section__style-2 pt-130 pb-120">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xl-6">
+        <div class="codeshift-section-heading codeshift-section-heading__style-2 text-center mb-50">
+          <span class="sub-heading">Portfolio</span>
+          <h2 class="heading">Our recent case studies</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xl-12">
+        <div class="content-left-wrapper">
+          <ul class="codeshift-project-filter codeshift-project-filter__style-2 list-unstyled d-flex align-items-center">
+            <li class="active" data-filter=".cat-1">cyber security</li>
+            <li data-filter=".cat-2">it consultancy</li>
+            <li data-filter=".cat-3">data analytics</li>
+            <li data-filter=".cat-4">Ui/Ux Design</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xl-12">
+        <div class="codeshift-project-wrapper mt-50">
+          <div class="row codeshift-project-grid mt-none-30">
+            <div class="col-xl-6 col-lg-6 cat-1 cat-4 cat-3 mt-30 grid">
+              <div class="codeshift-project-item codeshift-project-item__style-2">
+                <div class="content">
+                  <h4 class="title"><a href="project-details.html">Speakers</a></h4>
+                  <a href="project-details.html" class="inline-btn">
+                    <i class="far fa-arrow-right"></i>
+                  </a>
+                </div>
+                <div class="thumb">
+                  <img src="{% static 'assets/images/project/project-1.jpg' %}" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 cat-2 cat-4 cat-3 mt-30 grid">
+              <div class="codeshift-project-item codeshift-project-item__style-2">
+                <div class="content">
+                  <h4 class="title"><a href="project-details.html">SartoriMonteroda</a></h4>
+                  <a href="project-details.html" class="inline-btn">
+                    <i class="far fa-arrow-right"></i>
+                  </a>
+                </div>
+                <div class="thumb">
+                  <img src="{% static 'assets/images/project/project-2.jpg' %}" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 cat-4 cat-1 cat-3 mt-30 grid">
+              <div class="codeshift-project-item codeshift-project-item__style-2">
+                <div class="content">
+                  <h4 class="title"><a href="project-details.html">The New In Upcoming Design Think?</a></h4>
+                  <a href="project-details.html" class="inline-btn">
+                    <i class="far fa-arrow-right"></i>
+                  </a>
+                </div>
+                <div class="thumb">
+                  <img src="{% static 'assets/images/project/project-2-3.jpg' %}" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 cat-4 cat-3 mt-30 grid">
+              <div class="codeshift-project-item codeshift-project-item__style-2">
+                <div class="content">
+                  <h4 class="title"><a href="project-details.html">Branding For American IT..</a></h4>
+                  <a href="project-details.html" class="inline-btn">
+                    <i class="far fa-arrow-right"></i>
+                  </a>
+                </div>
+                <div class="thumb">
+                  <img src="{% static 'assets/images/project/project-2-4.jpg' %}" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 cat-2 cat-3 mt-30 grid">
+              <div class="codeshift-project-item codeshift-project-item__style-2">
+                <div class="content">
+                  <h4 class="title"><a href="project-details.html">World Best Available Scope..</a></h4>
+                  <a href="project-details.html" class="inline-btn">
+                    <i class="far fa-arrow-right"></i>
+                  </a>
+                </div>
+                <div class="thumb">
+                  <img src="{% static 'assets/images/project/project-2-5.jpg' %}" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 cat-5 cat-4 cat-3 mt-30 grid">
+              <div class="codeshift-project-item codeshift-project-item__style-2">
+                <div class="content">
+                  <h4 class="title"><a href="project-details.html">Software License Management..</a></h4>
+                  <a href="project-details.html" class="inline-btn">
+                    <i class="far fa-arrow-right"></i>
+                  </a>
+                </div>
+                <div class="thumb">
+                  <img src="{% static 'assets/images/project/project-2-6.jpg' %}" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-12 text-center mt-60">
+        <a href="#" class="codeshift-btn">Discover More Projects</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
