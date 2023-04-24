@@ -9,7 +9,7 @@ class Project(models.Model):
     description = models.TextField("Description")
     client = models.CharField("Client", max_length=50)
     category = models.ForeignKey("Category", verbose_name="Category", on_delete=models.CASCADE, related_name="projects")
-    website = models.CharField("Website", max_length=250)
+    website = models.CharField("Website", max_length=250, blank=True, null=True)
 
     class Meta:
         """Meta definition for Project."""
@@ -33,6 +33,23 @@ class Project(models.Model):
         if self.pk == Project.objects.last().pk:
             return None
         return Project.objects.filter(pk__gt=self.pk).first()
+    
+
+class ProjectPoint(models.Model):
+    """Model definition for ProjectPoint."""
+
+    project = models.ForeignKey("Project", verbose_name="Project", on_delete=models.CASCADE, related_name="points")
+    point = models.CharField("Point", max_length=250)
+
+    class Meta:
+        """Meta definition for ProjectPoint."""
+
+        verbose_name = 'ProjectPoint'
+        verbose_name_plural = 'ProjectPoints'
+
+    def __str__(self):
+        """Unicode representation of ProjectPoint."""
+        return f'{self.point}'
 
 
 class ProjectImage(models.Model):

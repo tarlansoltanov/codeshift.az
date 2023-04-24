@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Project, ProjectImage, Category
+from .models import Project, ProjectImage, Category, ProjectPoint
 
 
 @admin.register(Category)
@@ -12,7 +12,12 @@ class ProjectImageInline(admin.StackedInline):
     extra = 1
 
 
+class ProjectPointInline(admin.StackedInline):
+    model = ProjectPoint
+    extra = 1
+
+
 @admin.register(Project)
 class ProjectAdmin(admin.ModelAdmin):
     list_display = ('name', 'title', 'category', 'client', 'website')
-    inlines = [ProjectImageInline]
+    inlines = [ProjectImageInline, ProjectPointInline]
