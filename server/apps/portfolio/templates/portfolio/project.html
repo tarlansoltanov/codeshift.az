@@ -76,52 +76,14 @@
       <div class="col-xl-12 mt-90">
         <h2 class="codeshift-title mb-25">Project requirement</h2>
         <div class="row mt-none-15">
-          <div class="col-xl-6 mt-15">
-            <ul class="list-unstyled Language-list-item">
-              <li>
-                <img src="{% static 'assets/images/icons/double-arrow.png' %}" alt="" />
-                Existing user experience research–user personas, journeys
-              </li>
-              <li>
-                <img src="{% static 'assets/images/icons/double-arrow.png' %}" alt="" />
-                Usability testing existing products
-              </li>
-              <li>
-                <img src="{% static 'assets/images/icons/double-arrow.png' %}" alt="" />
-                Focus groups
-              </li>
-              <li>
-                <img src="{% static 'assets/images/icons/double-arrow.png' %}" alt="" />
-                Storyboards
-              </li>
-              <li>
-                <img src="{% static 'assets/images/icons/double-arrow.png' %}" alt="" />
-                Systems reviews
-              </li>
-            </ul>
-          </div>
-          <div class="col-xl-6 mt-15">
-            <ul class="list-unstyled Language-list-item">
-              <li>
-                <img src="{% static 'assets/images/icons/double-arrow.png' %}" alt="" />
-                User interviews
-              </li>
-              <li>
-                <img src="{% static 'assets/images/icons/double-arrow.png' %}" alt="" />
-                Usability testing existing products
-              </li>
-              <li>
-                <img src="{% static 'assets/images/icons/double-arrow.png' %}" alt="" />
-                Technical stakeholder interviews
-              </li>
-              <li>
-                <img src="{% static 'assets/images/icons/double-arrow.png' %}" alt="" />
-                Diary studies
-              </li>
-              <li>
-                <img src="{% static 'assets/images/icons/double-arrow.png' %}" alt="" />
-                Surveys
-              </li>
+          <div class="col-12 mt-15">
+            <ul class="list-unstyled Language-list-item d-flex row">
+              {% for item in project.points.all %}
+                <li class="col-6">
+                  <img src="{% static 'assets/images/icons/double-arrow.png' %}" alt="" />
+                  {{ item.point }}
+                </li>
+              {% endfor %}
             </ul>
           </div>
         </div>
