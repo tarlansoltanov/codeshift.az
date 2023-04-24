@@ -18,4 +18,26 @@ class Contact(models.Model):
 
     def __str__(self):
         """Unicode representation of Contact."""
-        return f"Contact Details"
+        return "Contact Details"
+    
+
+class Message(models.Model):
+    """Model definition for Message."""
+
+    name = models.CharField("Name", max_length=50)
+    email = models.EmailField("Email", max_length=254)
+    phone = models.CharField("Phone", max_length=50)
+    subject = models.CharField("Subject", max_length=50)
+    message = models.TextField("Message", max_length=500)
+    date = models.DateTimeField("Date", auto_now_add=True)
+
+    class Meta:
+        """Meta definition for Message."""
+
+        verbose_name = 'Message'
+        verbose_name_plural = 'Messages'
+
+    def __str__(self):
+        """Unicode representation of Message."""
+        return self.name
+
