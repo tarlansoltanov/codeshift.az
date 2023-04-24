@@ -4,17 +4,19 @@ services:
   nginx:
     image: nginx:latest
     ports:
-      - "80:80"
+      - 80:80
     volumes:
       - ./docker/nginx:/etc/nginx/conf.d/:ro
       - static:/var/www/static:ro
       - media:/var/www/media:ro
     networks:
       - webnet
+    depends_on:
+      - web
   
   web:
     <<: &web
-      image: "codeshift:prod"
+      image: codeshift:prod
       build:
         target: production_build
       command: bash ./docker/django/gunicorn/start.sh
