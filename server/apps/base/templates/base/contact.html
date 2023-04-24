@@ -107,27 +107,28 @@
         </div>
         <div class="col-xl-6">
           <div class="codeshift-getquote-form-wrapper">
-            <form method="POST" id="contact-form">
+            <form action="{% url 'base:contact' %}" method="POST" id="contact-form">
+              {% csrf_token %}
               <div class="codeshift-input-field mt-30">
                 <label for="name">Full Name *</label>
-                <input type="text" name="name" id="name" placeholder="Devon Lane" />
+                <input type="text" name="name" id="name" placeholder="Name Surname" />
               </div>
               <div class="codeshift-input-field mt-30">
-                <label for="Number">Number *</label>
-                <input type="text" name="Number" id="Number" placeholder="+994" />
+                <label for="phone">Phone *</label>
+                <input type="text" name="phone" id="phone" placeholder="+994 (xx) xxx xx xx" />
               </div>
 
               <div class="codeshift-input-field mt-30">
                 <label for="email">Email *</label>
-                <input type="email" name="email" id="email" placeholder="jackson.graham@example.com" />
+                <input type="email" name="email" id="email" placeholder="name.surname@example.com" />
               </div>
               <div class="codeshift-input-field mt-30">
                 <label for="subject">Subject *</label>
-                <input type="text" name="subject" id="subject" placeholder="Web,Mobile App..." />
+                <input type="text" name="subject" id="subject" placeholder="Web, Mobile App..." />
               </div>
               <div class="codeshift-input-field mt-30">
                 <label for="message">Message *</label>
-                <textarea name="message" id="message" placeholder="Details of project"></textarea>
+                <textarea name="message" id="message" placeholder="Details of your project"></textarea>
               </div>
               <button type="submit" class="codeshift-btn codeshift-btn__round mt-20">Submit Now</button>
               <p class="ajax-response"></p>
@@ -138,3 +139,8 @@
     </div>
   </section>
 {% endblock content %}
+
+
+{% block scripts %}
+  <script src="{% static 'assets/js/ajax-form.js' %}"></script>
+{% endblock scripts %}
