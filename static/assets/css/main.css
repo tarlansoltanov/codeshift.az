@@ -7660,3 +7660,9 @@ blockquote code {
 .project-content{
   text-align: center;
 }
+
+.portfolio-details-banner-img{
+  width: 1290px;
+  height: 540px;
+  object-fit: cover;
+}
