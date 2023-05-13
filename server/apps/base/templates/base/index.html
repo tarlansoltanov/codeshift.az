@@ -15,7 +15,7 @@
       <div class="row flex-lg-row flex-md-column-reverse">
         <div class="col-xl-5 col-lg-5">
           <div class="inner-content">
-            <h1 class="title wow fadeInUp" data-wow-delay="200ms" data-wow-duration="800ms">Professinal IT for private individuals and companies</h1>
+            <h1 class="title wow fadeInUp" data-wow-delay="200ms" data-wow-duration="800ms">Empower your business with innovative digital solutions.</h1>
             <div class="inner-btns mt-50">
               <a href="{% url 'portfolio:index' %}" class="codeshift-btn wow fadeInUp" data-wow-delay="500ms" data-wow-duration="800ms">Our Portfolio</a>
             </div>
@@ -65,8 +65,8 @@
           <div class="content-left-wrapper">
             <div class="codeshift-section-heading">
               <span class="sub-heading">RECENT PROJECTS</span>
-              <h2 class="heading mb-25">Our latest case studies</h2>
-              <p>Since 1997 we have been a visionary and a reliable software engineering partner for world-class brands.</p>
+              <h2 class="heading mb-25">Our latest projects</h2>
+              <p>Since 2015 we have been a visionary and a reliable software engineering partner for national brands.</p>
             </div>
             <ul class="codeshift-project-filter list-unstyled d-flex align-items-center mt-35">
               <li class="active" data-filter="">All</li>
@@ -85,7 +85,7 @@
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 cat-{{ item.category.id }} mt-30 grid">
                   <div class="codeshift-project-item">
                     <div class="thumb">
-                      <img class="home-project-img" src="{{ item.image.url }}" alt="" />
+                      <img class="home-project-img" src="{{ item.cover.url }}" alt="" />
                     </div>
                     <div class="content project-content">
                       <h4 class="title"><a href="{% url 'portfolio:project' pk=item.id %}">{{ item.name }}</a></h4>
