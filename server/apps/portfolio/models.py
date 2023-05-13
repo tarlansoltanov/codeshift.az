@@ -10,6 +10,9 @@ class Project(models.Model):
     client = models.CharField("Client", max_length=50)
     category = models.ForeignKey("Category", verbose_name="Category", on_delete=models.CASCADE, related_name="projects")
     website = models.CharField("Website", max_length=250, blank=True, null=True)
+    banner = models.ImageField("Banner", upload_to='portfolio/banners')
+    cover = models.ImageField("Cover", upload_to='portfolio/covers')
+    created_at = models.DateTimeField("Created At", auto_now_add=True)
 
     class Meta:
         """Meta definition for Project."""
