@@ -2,6 +2,7 @@ compose-dev = docker-compose.yml
 compose-prod = docker/docker-compose.prod.yml
 
 service := 
+language := en
 
 .PHONY: run
 
@@ -52,3 +53,11 @@ createsuperuser:
 collectstatic:
 	@echo "Django Collect Static Files"
 	docker compose -f $(compose-dev) -f $(compose-prod) exec web python manage.py collectstatic --no-input
+
+makemessages:
+	@echo "Django Makemessage files"
+	docker compose exec web python manage.py makemessages -l $(language)
+
+compilemessages:
+	@echo "Django Compile Message files"
+	docker compose exec web python manage.py compilemessages

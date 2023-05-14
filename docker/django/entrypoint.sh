@@ -14,4 +14,8 @@ python manage.py makemigrations --noinput
 echo "Apply database migrations"
 python manage.py migrate --noinput
 
+# Apply translation compilation
+echo "Apply translation compilation"
+python manage.py compilemessages --noinput
+
 exec $cmd

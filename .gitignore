@@ -30,3 +30,7 @@ staticfiles/
 # Media
 **/media/**
 !**/media/
+
+# Translations
+*.mo
+*.pot

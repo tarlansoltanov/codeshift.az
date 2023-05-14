@@ -17,17 +17,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from django.conf import settings
+from django.conf.urls.static import static
+
+from django.conf.urls.i18n import i18n_patterns
+
 from server.apps.base import urls as base_urls
 from server.apps.portfolio import urls as portfolio_urls
 
-urlpatterns = [
+
+urlpatterns = i18n_patterns(
     path('admin/', admin.site.urls),
     path('', include(base_urls, namespace='base')),
     path('portfolio/', include(portfolio_urls, namespace='portfolio')),
-]
-
-from django.conf import settings
-from django.conf.urls.static import static
+)
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
