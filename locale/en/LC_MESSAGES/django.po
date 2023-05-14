@@ -5,11 +5,60 @@
 #, fuzzy
 msgid ""
 msgstr ""
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-14 18:17+0400\n"
 "Language: English\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: server/apps/base/templates/base/layout.html:62
+msgid "Home"
+msgstr ""
+
+#: server/apps/base/templates/base/layout.html:65
+msgid "Portfolio"
+msgstr ""
+
+#: server/apps/base/templates/base/layout.html:75
+#: server/apps/base/templates/base/layout.html:260
+msgid "About"
+msgstr ""
+
+#: server/apps/base/templates/base/layout.html:77
+msgid "Language"
+msgstr ""
+
+#: server/apps/base/templates/base/layout.html:87
+#: server/apps/base/templates/base/layout.html:261
+msgid "Contact"
+msgstr ""
+
+#: server/apps/base/templates/base/layout.html:136
+#: server/apps/base/templates/base/layout.html:188
+msgid ""
+"CodeShift: Your Trusted Digital Solutions Partner. With over 6 years of "
+"experience in website and mobile app development, we deliver innovative and "
+"high-quality digital products that help businesses connect with their target "
+"audience. Our team of experienced professionals is passionate about digital "
+"solutions and committed to delivering outstanding results and exceptional "
+"customer service. Let us help you bring your vision to life. Choose "
+"CodeShift for your digital needs."
+msgstr ""
+
+#: server/apps/base/templates/base/layout.html:199
+msgid "Contact us"
+msgstr ""
+
+#: server/apps/base/templates/base/layout.html:246
+msgid "Services"
+msgstr ""
+
+#: server/apps/base/templates/base/layout.html:258
+msgid "Information"
+msgstr ""
+
 #: server/settings/components/internationalization.py:14
 msgid "Azerbaijani"
 msgstr "Azerbaijani"

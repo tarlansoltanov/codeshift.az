@@ -1,5 +1,7 @@
 {% load static %}
 
+{% load i18n %}
+
 <!DOCTYPE html>
 <html class="no-js" lang="en">
   <head>
@@ -12,7 +14,7 @@
     <meta name="keywords" content="CodeShift, Technology & IT Solutions Service, Web Development" />
 
     <!-- Title -->
-    <title>CodeShift - Technology & IT Solutions Service</title>
+    <title>CodeShift - Technology & IT Solutions Service </title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{% static 'assets/images/favicon/favicon.png' %}" type="images/x-icon" />
@@ -59,10 +61,10 @@
                 <div class="codeshift-main-menu">
                   <nav id="codeshift-navbar">
                     <ul>
-                      <li class=""><a href="{% url 'base:home' %}">Home</a></li>
+                      <li class=""><a href="{% url 'base:home' %}">{% trans 'Home' %}</a></li>
 
                       <li class="menu-item-has-children">
-                        <a href="{% url 'portfolio:index' %}">Portfolio</a>
+                        <a href="{% url 'portfolio:index' %}">{% trans 'Portfolio' %}</a>
                         <ul class="sub-menu">
                           {% for category in categories %}
                             <li>
@@ -72,19 +74,23 @@
                         </ul>
                       </li>
 
-                      <li><a href="{% url 'base:about' %}">About Us</a></li>
+                      <li><a href="{% url 'base:about' %}">{% trans 'About' %}</a></li>
                       <li class="menu-item-has-children">
-                        <a href="#">Language</a>
+                        <a href="#">{% trans 'Language' %}</a>
                         <ul class="sub-menu">
-                          <li><a href="#">Azerbaijan</a></li>
-                          <li><a href="#">Enlish</a></li>
-                          <li><a href="#">Russian</a></li>
+                          {% get_available_languages as languages %}
+                          {% get_current_language as current_lang %}
+                          {% with "/"|add:current_lang as redundant %}
+                            {% for lan in languages %}
+                              <li><a href="/{{ lan.0 }}{{ request.get_full_path|cut:redundant }}">{{ lan.1 }}</a></li>
+                            {% endfor %}
+                          {% endwith %}
                         </ul>
                       </li>
                     </ul>
                   </nav>
                 </div>
-                <a href="{% url 'base:contact' %}" class="codeshift-btn">Contact</a>
+                <a href="{% url 'base:contact' %}" class="codeshift-btn">{% trans 'Contact' %}</a>
               </div>
             </div>
           </div>
@@ -131,12 +137,20 @@
         <div class="tab-pane fade" id="menu-tab-2" role="tabpanel" aria-labelledby="menu-tab-2-tab">
           <div class="side-info">
             <div class="side-info__content mb-35">
-              <h4 class="title mb-10">About us</h4>
-              <p>CodeShift is a leading provider of website and mobile app development services. We specialize in creating innovative and high-quality digital products that help businesses and organizations connect with their target audience.</p>
-              <a class="codeshift-btn codeshift-btn__small mt-20" href="{% url 'base:contact' %}">Contact us</a>
+              <h4 class="title mb-10">{% trans 'About us' %}</h4>
+              <p>
+                {% blocktrans trimmed %}
+                  CodeShift: Your Trusted Digital Solutions Partner. With over 6 years of experience in 
+                  website and mobile app development, we deliver innovative and high-quality digital products 
+                  that help businesses connect with their target audience. Our team of experienced professionals 
+                  is passionate about digital solutions and committed to delivering outstanding results and exceptional 
+                  customer service. Let us help you bring your vision to life. Choose CodeShift for your digital needs.
+                {% endblocktrans %}
+              </p>
+              <a class="codeshift-btn codeshift-btn__small mt-20" href="{% url 'base:contact' %}">{% trans 'Contact us' %}</a>
             </div>
             <div class="contact__info--wrapper mt-15">
-              <h4 class="title mb-15">Contact us</h4>
+              <h4 class="title mb-15">{% trans 'Contact us' %}</h4>
               <ul class="contact__info list-unstyled">
                 <li>
                   <span><i class="fas fa-map-marker-alt"></i></span>
@@ -175,18 +189,20 @@
       </div>
       <div class="side-info">
         <div class="side-info__content mb-35">
-          <h4 class="title mb-10">About us</h4>
+          <h4 class="title mb-10">{% trans 'About us' %}</h4>
           <p>
-            CodeShift: Your Trusted Digital Solutions Partner. With over 6 years of experience in 
-            website and mobile app development, we deliver innovative and high-quality digital products 
-            that help businesses connect with their target audience. Our team of experienced professionals 
-            is passionate about digital solutions and committed to delivering outstanding results and exceptional 
-            customer service. Let us help you bring your vision to life. Choose CodeShift for your digital needs.
+            {% blocktrans trimmed %}
+              CodeShift: Your Trusted Digital Solutions Partner. With over 6 years of experience in 
+              website and mobile app development, we deliver innovative and high-quality digital products 
+              that help businesses connect with their target audience. Our team of experienced professionals 
+              is passionate about digital solutions and committed to delivering outstanding results and exceptional 
+              customer service. Let us help you bring your vision to life. Choose CodeShift for your digital needs.
+            {% endblocktrans %}
           </p>
-          <a class="codeshift-btn codeshift-btn__small mt-20" href="{% url 'base:contact' %}">Contact us</a>
+          <a class="codeshift-btn codeshift-btn__small mt-20" href="{% url 'base:contact' %}">{% trans 'Contact us' %}</a>
         </div>
         <div class="contact__info--wrapper mt-15">
-          <h4 class="title mb-15">Contact us</h4>
+          <h4 class="title mb-15">{% trans 'Contacts' %}</h4>
           <ul class="contact__info list-unstyled">
             <li>
               <span><i class="fas fa-map-marker-alt"></i></span>
@@ -220,7 +236,7 @@
               <div class="widget">
                 <div class="about-widget">
                   <a href="{% url 'base:home' %}" class="codeshift-footer-logo mb-35">
-                    <img src="{% static 'assets/images/logo.png' %}" alt="" />
+                    <img src="{% static 'assets/images/logo.png' %}" alt="CodeShift" />
                   </a>
                   <p><i class="far fa-map-marker-alt"></i> {{ address }}</p>
                   <p><i class="far fa-envelope"></i> {{ email }}</p>
@@ -233,7 +249,7 @@
             </div>
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 codeshift-custom-col mt-30">
               <div class="widget">
-                <h3 class="widget-title">Services</h3>
+                <h3 class="widget-title">{% trans 'Services' %}</h3>
                 <ul>
                   {% for category in categories %}
                     <li>
@@ -245,10 +261,10 @@
             </div>
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 codeshift-custom-col mt-30">
               <div class="widget">
-                <h3 class="widget-title">Information</h3>
+                <h3 class="widget-title">{% trans 'Information' %}</h3>
                 <ul>
-                  <li><a href="{% url 'base:about' %}">About</a></li>
-                  <li><a href="{% url 'base:contact' %}">Contact</a></li>
+                  <li><a href="{% url 'base:about' %}">{% trans 'About' %}</a></li>
+                  <li><a href="{% url 'base:contact' %}">{% trans 'Contact' %}</a></li>
                 </ul>
               </div>
             </div>

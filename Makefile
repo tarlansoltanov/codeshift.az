@@ -60,4 +60,4 @@ makemessages:
 
 compilemessages:
 	@echo "Django Compile Message files"
-	docker compose exec web python manage.py compilemessages
+	docker compose exec web python manage.py compilemessages --ignore django

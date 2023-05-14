@@ -5,11 +5,78 @@
 #, fuzzy
 msgid ""
 msgstr ""
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-14 19:01+0400\n"
 "Language: Azerbaijani\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: server/apps/base/templates/base/layout.html:64
+msgid "Home"
+msgstr "Ana Səhifə"
+
+#: server/apps/base/templates/base/layout.html:67
+msgid "Portfolio"
+msgstr "Portfolio"
+
+#: server/apps/base/templates/base/layout.html:77
+#: server/apps/base/templates/base/layout.html:262
+msgid "About"
+msgstr "Haqqımızda"
+
+#: server/apps/base/templates/base/layout.html:79
+msgid "Language"
+msgstr "Dil"
+
+#: server/apps/base/templates/base/layout.html:89
+#: server/apps/base/templates/base/layout.html:263
+msgid "Contact"
+msgstr "Əlaqə"
+
+#: server/apps/base/templates/base/layout.html:136
+#: server/apps/base/templates/base/layout.html:188
+msgid "About us"
+msgstr "Haqqımızda"
+
+#: server/apps/base/templates/base/layout.html:138
+#: server/apps/base/templates/base/layout.html:190
+msgid ""
+"CodeShift: Your Trusted Digital Solutions Partner. With over 6 years of "
+"experience in website and mobile app development, we deliver innovative and "
+"high-quality digital products that help businesses connect with their target "
+"audience. Our team of experienced professionals is passionate about digital "
+"solutions and committed to delivering outstanding results and exceptional "
+"customer service. Let us help you bring your vision to life. Choose "
+"CodeShift for your digital needs."
+msgstr ""
+"CodeShift: Etibarlı Digital Məhsullar üzrə Tərəfdaşınız. Vebsayt və mobil "
+"proqramların hazırlanması sahəsində 6 ildən artıq təcrübəmizlə biz "
+"bizneslərin hədəf auditoriyası ilə əlaqə saxlamasına kömək edən innovativ və "
+"yüksək keyfiyyətli digital məhsullar təqdim edirik. Təcrübəli peşəkarlardan "
+"ibarət komandamız digital məhsulların hazırlanmasında həvəslidir və üstün "
+"nəticələr və müstəsna müştəri xidməti təqdim etməyə sadiqdir. Vizyonunuzu "
+"həyata keçirməyə kömək edək. Digital ehtiyaclarınız üçün bizi seçin."
+
+#: server/apps/base/templates/base/layout.html:146
+#: server/apps/base/templates/base/layout.html:149
+#: server/apps/base/templates/base/layout.html:198
+msgid "Contact us"
+msgstr "Əlaqə"
+
+#: server/apps/base/templates/base/layout.html:201
+msgid "Contacts"
+msgstr "Əlaqə vasitələrimiz"
+
+#: server/apps/base/templates/base/layout.html:248
+msgid "Services"
+msgstr "Xidmətlərimiz"
+
+#: server/apps/base/templates/base/layout.html:260
+msgid "Information"
+msgstr "Məlumat"
+
 #: server/settings/components/internationalization.py:14
 msgid "Azerbaijani"
 msgstr "Azərbaycan"
