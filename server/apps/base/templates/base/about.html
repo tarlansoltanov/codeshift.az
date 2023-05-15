@@ -2,6 +2,8 @@
 
 {% load static %}
 
+{% load i18n %}
+
 {% block content %}
   <!-- Breadcrumb -->
   <section class="breadcrumb-area fix theme-dark-bg bg_img">
@@ -21,14 +23,14 @@
       <div class="row">
         <div class="col-xl-12">
           <div class="codeshift-breadcrumb-wrapper position-relative pt-190 pb-190">
-            <h2 class="page-title">About CodeShift</h2>
+            <h2 class="page-title">{% trans 'About CodeShift' %}</h2>
             <div class="codeshift-breadcrumb breadcrumbs">
               <ul class="list-unstyled d-flex align-items-center">
                 <li class="codeshift-item duxinbcrumb-begin">
-                  <a href="{% url 'base:home' %}"><span>Home Page</span></a>
+                  <a href="{% url 'base:home' %}"><span>{% trans 'Home Page' %}</span></a>
                 </li>
                 <li class="codeshift-item duxinbcrumb-end">
-                  <span>About us</span>
+                  <span>{% trans 'About us' %}</span>
                 </li>
               </ul>
             </div>
@@ -47,19 +49,21 @@
       <div class="row">
         <div class="col-xl-6">
           <div class="codeshift-section-heading codeshift-section-heading__style-2">
-            <span class="sub-heading">ABOUT US</span>
-            <h2 class="heading">We provide High-quality Services.</h2>
+            <span class="sub-heading">{% trans 'ABOUT US' %}</span>
+            <h2 class="heading">{% trans 'We provide High-quality Services.' %}</h2>
           </div>
         </div>
         <div class="col-xl-6">
           <div class="abt-desc">
             <p>
-              Since our founding, CodeShift has been a trusted provider of website and mobile app development services. 
-              Our company has a long history of creating innovative and high-quality digital products that help businesses 
-              and organizations connect with their target audience. With a team of experienced professionals who are passionate 
-              about digital solutions, we have established ourselves as a leading provider in the industry. Our commitment to delivering 
-              outstanding results and providing exceptional customer service has helped us build long-lasting relationships with our clients. 
-              Choose CodeShift, and benefit from our years of experience and expertise in the digital solutions space.
+              {% blocktrans trimmed %}
+                Since our founding, CodeShift has been a trusted provider of website and mobile app development services. 
+                Our company has a long history of creating innovative and high-quality digital products that help businesses 
+                and organizations connect with their target audience. With a team of experienced professionals who are passionate 
+                about digital solutions, we have established ourselves as a leading provider in the industry. Our commitment to delivering 
+                outstanding results and providing exceptional customer service has helped us build long-lasting relationships with our clients. 
+                Choose CodeShift, and benefit from our years of experience and expertise in the digital solutions space.
+              {% endblocktrans %}
             </p>
           </div>
         </div>
@@ -87,12 +91,14 @@
               <img src="{% static 'assets/images/icons/mission-1.png' %}" alt="" />
             </div>
             <div class="content mt-25">
-              <h2 class="title">Our History</h2>
+              <h2 class="title">{% trans 'Our History' %}</h2>
               <p>
-                For over 6 years, CodeShift has been a visionary and reliable software engineering partner 
-                for world-class brands. We provide innovative and high-quality digital solutions tailored to 
-                each client's unique needs. With our years of experience and expertise, we guide you every step 
-                of the way, from concept to launch. Choose CodeShift for outstanding results and exceptional customer service.
+                {% blocktrans trimmed %}
+                  For over 6 years, CodeShift has been a visionary and reliable software engineering partner 
+                  for world-class brands. We provide innovative and high-quality digital solutions tailored to 
+                  each client's unique needs. With our years of experience and expertise, we guide you every step 
+                  of the way, from concept to launch. Choose CodeShift for outstanding results and exceptional customer service.
+                {% endblocktrans %}
               </p>
             </div>
           </div>
@@ -103,12 +109,14 @@
               <img src="{% static 'assets/images/icons/mission-2.png' %}" alt="" />
             </div>
             <div class="content mt-25">
-              <h2 class="title">Our mission</h2>
+              <h2 class="title">{% trans 'Our mission' %}</h2>
               <p>
-                At CodeShift, we help our clients succeed in the digital world. We work closely with you to 
-                understand your unique needs and design custom solutions that achieve your business goals. 
-                From user-friendly websites to cutting-edge mobile apps, our innovative digital solutions are 
-                tailored to your specific requirements. Choose CodeShift for a partner that's committed to your success.
+                {% blocktrans trimmed %}
+                  At CodeShift, we help our clients succeed in the digital world. We work closely with you to 
+                  understand your unique needs and design custom solutions that achieve your business goals. 
+                  From user-friendly websites to cutting-edge mobile apps, our innovative digital solutions are 
+                  tailored to your specific requirements. Choose CodeShift for a partner that's committed to your success.
+                {% endblocktrans %}
               </p>
             </div>
           </div>
@@ -119,13 +127,15 @@
               <img src="{% static 'assets/images/icons/mission-3.png' %}" alt="" />
             </div>
             <div class="content mt-25">
-              <h2 class="title">Our vision</h2>
+              <h2 class="title">{% trans 'Our vision' %}</h2>
               <p>
-                At CodeShift, we're passionate about delivering cutting-edge technology and outstanding design. 
-                Our expertise in a wide range of technologies enables us to make a real impact for our clients. 
-                We approach every project with a focus on innovation and collaboration, delivering results that 
-                exceed expectations. Choose us as your digital solutions partner and benefit from our commitment 
-                to excellence in technology and design.
+                {% blocktrans trimmed %}
+                  At CodeShift, we're passionate about delivering cutting-edge technology and outstanding design. 
+                  Our expertise in a wide range of technologies enables us to make a real impact for our clients. 
+                  We approach every project with a focus on innovation and collaboration, delivering results that 
+                  exceed expectations. Choose us as your digital solutions partner and benefit from our commitment 
+                  to excellence in technology and design.
+                {% endblocktrans %}
               </p>
             </div>
           </div>
@@ -140,8 +150,8 @@
       <div class="row">
         <div class="col-xl-4 col-lg-10 col-md-12 align-self-center">
           <div class="codeshift-section-heading codeshift-section-heading__style-2">
-            <span class="sub-heading">achievement</span>
-            <h2 class="heading mb-20">Some number of our achivement</h2>
+            <span class="sub-heading">{% trans 'achievement' %}</span>
+            <h2 class="heading mb-20">{% trans 'Some number of our achivement' %}</h2>
             <div class="stocox-faq-wrapper faq__wrapper"></div>
           </div>
         </div>
@@ -156,7 +166,7 @@
                   <span class="odometer" data-count="40+">00</span>
                   <span class="sign">+</span>
                 </h2>
-                <p>Satisfied Clients</p>
+                <p>{% trans 'Satisfied Clients' %}</p>
               </div>
               <div class="shape"><img src="{% static 'assets/images/shapes/achivement-shape.png' %}" alt="" /></div>
             </div>
@@ -169,7 +179,7 @@
                   <span class="odometer" data-count="50+">00</span>
                   <span class="sign">+</span>
                 </h2>
-                <p>Project Completed</p>
+                <p>{% trans 'Project Completed' %}</p>
               </div>
             </div>
             <div class="box-item box-item__style-2">
@@ -181,7 +191,7 @@
                   <span class="odometer" data-count="80">00</span>
                   <span class="sign">+</span>
                 </h2>
-                <p>Bands Joined</p>
+                <p>{% trans 'Bands Joined' %}</p>
               </div>
             </div>
             <div class="box-item box-item__style-2">
@@ -193,7 +203,7 @@
                   <span class="odometer" data-count="10">00</span>
                   <span class="sign">+</span>
                 </h2>
-                <p>Team Member</p>
+                <p>{% trans 'Team Member' %}</p>
               </div>
             </div>
           </div>
@@ -208,19 +218,21 @@
       <div class="row">
         <div class="col-xl-6">
           <div class="codeshift-section-heading codeshift-section-heading__style-2">
-            <span class="sub-heading">why choose us</span>
-            <h2 class="heading">Custom IT solutions <br />for your business</h2>
+            <span class="sub-heading">{% trans 'why choose us' %}</span>
+            <h2 class="heading">{% trans 'Custom IT solutions <br />for your business'|linebreaks %}</h2>
           </div>
         </div>
         <div class="col-xl-6">
           <div class="abt-desc">
             <p>
-              At CodeShift, our top priority is helping our clients succeed. We believe that when our clients thrive, 
-              we thrive. That's why we approach every project with a focus on delivering exceptional value and building 
-              long-lasting relationships with our clients. Whether you're looking to launch a cutting-edge website or mobile app, 
-              or you want to take your existing digital products to the next level, we're here to help. With our innovative solutions 
-              and passionate team of professionals, we're dedicated to delivering outstanding results that exceed your expectations. 
-              Choose CodeShift and experience the difference that comes from partnering with a digital solutions provider that truly cares about your success.
+              {% blocktrans trimmed %}
+                At CodeShift, our top priority is helping our clients succeed. We believe that when our clients thrive, 
+                we thrive. That's why we approach every project with a focus on delivering exceptional value and building 
+                long-lasting relationships with our clients. Whether you're looking to launch a cutting-edge website or mobile app, 
+                or you want to take your existing digital products to the next level, we're here to help. With our innovative solutions 
+                and passionate team of professionals, we're dedicated to delivering outstanding results that exceed your expectations. 
+                Choose CodeShift and experience the difference that comes from partnering with a digital solutions provider that truly cares about your success.
+              {% endblocktrans %}
             </p>
           </div>
         </div>

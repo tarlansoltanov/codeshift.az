@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-14 19:01+0400\n"
-"PO-Revision-Date: 2023-05-15 18:49+0400\n"
+"POT-Creation-Date: 2023-05-15 20:22+0400\n"
+"PO-Revision-Date: 2023-05-15 20:25+0400\n"
 "Last-Translator:   <>\n"
 "Language: Azerbaijani\n"
 "MIME-Version: 1.0\n"
@@ -16,16 +16,329 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.9.9\n"
 
+#: server/apps/base/templates/base/about.html:26
+msgid "About CodeShift"
+msgstr "Haqqımızda"
+
+#: server/apps/base/templates/base/about.html:30
+#: server/apps/base/templates/base/contact.html:30
+#: server/apps/portfolio/templates/portfolio/index.html:30
+#: server/apps/portfolio/templates/portfolio/project.html:30
+msgid "Home Page"
+msgstr "Ana Səhifə"
+
+#: server/apps/base/templates/base/about.html:33
+#: server/apps/base/templates/base/layout.html:140
+#: server/apps/base/templates/base/layout.html:192
+msgid "About us"
+msgstr "Haqqımızda"
+
+#: server/apps/base/templates/base/about.html:52
+msgid "ABOUT US"
+msgstr "HAQQIMIZDA"
+
+#: server/apps/base/templates/base/about.html:53
+msgid "We provide High-quality Services."
+msgstr "Biz yüksək keyfiyyətli servis təklif edirik"
+
+#: server/apps/base/templates/base/about.html:59
+msgid ""
+"Since our founding, CodeShift has been a trusted provider of website and "
+"mobile app development services. Our company has a long history of creating "
+"innovative and high-quality digital products that help businesses and "
+"organizations connect with their target audience. With a team of experienced"
+" professionals who are passionate about digital solutions, we have "
+"established ourselves as a leading provider in the industry. Our commitment "
+"to delivering outstanding results and providing exceptional customer service"
+" has helped us build long-lasting relationships with our clients. Choose "
+"CodeShift, and benefit from our years of experience and expertise in the "
+"digital solutions space."
+msgstr ""
+"Yarandığımız gündən CodeShift vebsayt və mobil proqramların hazırlanması "
+"xidmətlərinin etibarlı təminatçısı olmuşdur. Şirkətimiz müəssisələrə və "
+"təşkilatlara hədəf auditoriyası ilə əlaqə yaratmağa kömək edən innovativ və "
+"yüksək keyfiyyətli web və mobil məhsullar yaratmaqda peşakardır. Web və "
+"Mobil xidmətlərin hazırlanmasında həvəsli olan təcrübəli peşəkarlar "
+"komandası ilə biz özümüzü sənayedə aparıcı şirkətlərdən biri kimi "
+"təsdiqləmişik. Görkəmli nəticələr əldə etmək və müstəsna müştəri xidməti "
+"göstərmək öhdəliyimiz müştərilərimizlə uzunmüddətli əlaqələr qurmağa kömək "
+"etdi. CodeShift-i seçin və digital məhsulların yaradılması sahəsində "
+"çoxillik təcrübəmizdən faydalanın."
+
+#: server/apps/base/templates/base/about.html:94
+msgid "Our History"
+msgstr "Bizim tariximiz"
+
+#: server/apps/base/templates/base/about.html:96
+msgid ""
+"For over 6 years, CodeShift has been a visionary and reliable software "
+"engineering partner for world-class brands. We provide innovative and high-"
+"quality digital solutions tailored to each client's unique needs. With our "
+"years of experience and expertise, we guide you every step of the way, from "
+"concept to launch. Choose CodeShift for outstanding results and exceptional "
+"customer service."
+msgstr ""
+"6 ildən artıqdır ki, CodeShift dünya səviyyəli brendlər üçün uzaqgörən və "
+"etibarlı proqram mühəndisliyi tərəfdaşıdır. Biz hər bir müştərinin unikal "
+"ehtiyaclarına uyğunlaşdırılmış innovativ və yüksək keyfiyyətli digital "
+"xidmətlər təqdim edirik. 6 İllik təcrübəmiz və peşakarlığımızla biz sizə "
+"planlamadan tutmuş məhsul istifadə olunana qədər hər addımda bələdçilik "
+"edirik. Görkəmli nəticələr və müstəsna müştəri xidməti üçün CodeShift seçin."
+
+#: server/apps/base/templates/base/about.html:112
+msgid "Our mission"
+msgstr "Bizim hədəfimiz"
+
+#: server/apps/base/templates/base/about.html:114
+msgid ""
+"At CodeShift, we help our clients succeed in the digital world. We work "
+"closely with you to understand your unique needs and design custom solutions"
+" that achieve your business goals. From user-friendly websites to cutting-"
+"edge mobile apps, our innovative digital solutions are tailored to your "
+"specific requirements. Choose CodeShift for a partner that's committed to "
+"your success."
+msgstr ""
+"CodeShift-də biz müştərilərimizə digital xidmətlərdə uğur qazanmağa kömək "
+"edirik. Biz sizin unikal ehtiyaclarınızı anlamaq və biznes məqsədlərinizə "
+"çatan fərdi məhsullar hazırlamaq üçün sizinlə sıx əməkdaşlıq edirik. "
+"İstifadəçi üçün rahat olan veb-saytlardan ən müasir mobil proqramlara qədər "
+"innovativ digital məhsullarımız sizin xüsusi tələblərinizə uyğunlaşdırılıb. "
+"Uğurunuza sadiq olan tərəfdaş üçün CodeShift seçin."
+
+#: server/apps/base/templates/base/about.html:130
+msgid "Our vision"
+msgstr "Bizim Görüşümüz"
+
+#: server/apps/base/templates/base/about.html:132
+msgid ""
+"At CodeShift, we're passionate about delivering cutting-edge technology and "
+"outstanding design. Our expertise in a wide range of technologies enables us"
+" to make a real impact for our clients. We approach every project with a "
+"focus on innovation and collaboration, delivering results that exceed "
+"expectations. Choose us as your digital solutions partner and benefit from "
+"our commitment to excellence in technology and design."
+msgstr ""
+"CodeShift-də biz qabaqcıl texnologiya və görkəmli dizayn təqdim etməyə "
+"həvəsliyik. Geniş çeşidli texnologiyalar üzrə təcrübəmiz bizə "
+"müştərilərimizə real təsir göstərməyə imkan verir. Biz hər bir layihəyə "
+"innovasiya və əməkdaşlığa diqqət etməklə yanaşır, gözləntiləri üstələyən "
+"nəticələr veririk. Tərəfdaşınız olaraq bizi seçin və texnologiya və dizaynda"
+" mükəmməlliyə olan öhdəliyimizdən faydalanın."
+
+#: server/apps/base/templates/base/about.html:153
+msgid "achievement"
+msgstr "Nailiyyətlərimiz"
+
+#: server/apps/base/templates/base/about.html:154
+msgid "Some number of our achivement"
+msgstr "Nailiyyətlərimizin bəziləri"
+
+#: server/apps/base/templates/base/about.html:169
+msgid "Satisfied Clients"
+msgstr "Məmnun müştəri"
+
+#: server/apps/base/templates/base/about.html:182
+msgid "Project Completed"
+msgstr "Proyekt tamamlanmışdır"
+
+#: server/apps/base/templates/base/about.html:194
+msgid "Bands Joined"
+msgstr "Şirkət razı qalmışdır"
+
+#: server/apps/base/templates/base/about.html:206
+msgid "Team Member"
+msgstr "Peşəkar "
+
+#: server/apps/base/templates/base/about.html:221
+msgid "why choose us"
+msgstr "Niyə bizi seçməlisiniz?"
+
+#: server/apps/base/templates/base/about.html:222
+msgid "Custom IT solutions <br />for your business"
+msgstr "Biznesiniz üçün <br /> xüsusi digital həllər."
+
+#: server/apps/base/templates/base/about.html:228
+msgid ""
+"At CodeShift, our top priority is helping our clients succeed. We believe "
+"that when our clients thrive, we thrive. That's why we approach every "
+"project with a focus on delivering exceptional value and building long-"
+"lasting relationships with our clients. Whether you're looking to launch a "
+"cutting-edge website or mobile app, or you want to take your existing "
+"digital products to the next level, we're here to help. With our innovative "
+"solutions and passionate team of professionals, we're dedicated to "
+"delivering outstanding results that exceed your expectations. Choose "
+"CodeShift and experience the difference that comes from partnering with a "
+"digital solutions provider that truly cares about your success."
+msgstr ""
+"CodeShift-də bizim əsas prioritetimiz müştərilərimizin uğur qazanmasına "
+"kömək etməkdir. Biz inanırıq ki, müştərilərimiz inkişaf etdikdə biz də "
+"inkişaf edirik. Buna görə də biz hər bir layihəyə müstəsna dəyər təqdim "
+"etməyə və müştərilərimizlə uzunmüddətli əlaqələr qurmağa diqqətlə fikir "
+"veririk. İstər ən müasir veb-sayt və ya mobil tətbiqetməni işə salmaq "
+"istəsəniz, istərsə də mövcud digital məhsullarınızı növbəti səviyyəyə "
+"qaldırmaq istəsəniz, biz kömək etmək üçün buradayıq. Yenilikçi həllərimiz və"
+" həvəsli peşəkarlar komandamız ilə biz gözləntilərinizi üstələyən əla "
+"nəticələr təqdim etməyə çalışırıq. CodeShift-i seçin və uğurunuzu həqiqətən "
+"düşünən digital məhsullar tərəfdaşı ilə əməkdaşlıqdan yaranan fərqi yaşayın."
+
+#: server/apps/base/templates/base/contact.html:26
+#: server/apps/base/templates/base/contact.html:33
+#: server/apps/base/templates/base/layout.html:150
+#: server/apps/base/templates/base/layout.html:153
+#: server/apps/base/templates/base/layout.html:202
+msgid "Contact us"
+msgstr "Əlaqə"
+
+#: server/apps/base/templates/base/contact.html:56
+msgid "Visit Us Daily"
+msgstr "Görüşümüzə gəlin"
+
+#: server/apps/base/templates/base/contact.html:69
+msgid "Contact Us"
+msgstr "Əlaqə saxlayın"
+
+#: server/apps/base/templates/base/contact.html:82
+msgid "Email Us"
+msgstr "Email yazın"
+
+#: server/apps/base/templates/base/contact.html:99
+msgid "Get free quote"
+msgstr "Təklifinizi yazın"
+
+#: server/apps/base/templates/base/contact.html:100
+msgid "Just have a quick any questions?"
+msgstr "Bizə sualınız var?"
+
+#: server/apps/base/templates/base/contact.html:115
+msgid "Full Name"
+msgstr "Ad və Soyad"
+
+#: server/apps/base/templates/base/contact.html:116
+msgid "Name Surname"
+msgstr "Ad Soyad"
+
+#: server/apps/base/templates/base/contact.html:119
+msgid "Phone"
+msgstr "Telefon"
+
+#: server/apps/base/templates/base/contact.html:124
+msgid "Email"
+msgstr "Email"
+
+#: server/apps/base/templates/base/contact.html:128
+msgid "Subject"
+msgstr "Başlıq"
+
+#: server/apps/base/templates/base/contact.html:132
+msgid "Message"
+msgstr "Mesaj"
+
+#: server/apps/base/templates/base/contact.html:133
+msgid "Details of your project"
+msgstr "Proyektiniz haqqında detallar"
+
+#: server/apps/base/templates/base/contact.html:135
+msgid "Submit Now"
+msgstr "Göndər"
+
+#: server/apps/base/templates/base/index.html:20
+msgid "Empower your business with innovative digital solutions."
+msgstr "Biznesinizi innovativ digital məhsullarımızla gücləndirin."
+
+#: server/apps/base/templates/base/index.html:22
+msgid "Our Portfolio"
+msgstr "Bizim Portfolio"
+
+#: server/apps/base/templates/base/index.html:42
+msgid "100% Business Growth"
+msgstr "100% Biznes inkişafı"
+
+#: server/apps/base/templates/base/index.html:48
+msgid "40+ Happy Clients"
+msgstr "40+ Məmnun müştəri"
+
+#: server/apps/base/templates/base/index.html:69
+msgid "RECENT PROJECTS"
+msgstr "Axrıncı proyektlər"
+
+#: server/apps/base/templates/base/index.html:70
+msgid "Our latest projects"
+msgstr "Bizim ən son proyektlərimiz"
+
+#: server/apps/base/templates/base/index.html:71
+msgid ""
+"Since 2015 we have been a visionary and a reliable software engineering "
+"partner for national brands."
+msgstr ""
+"2015-ci ildən biz beynəlxalq brendlər üçün uzaqgörən və etibarlı proqram "
+"mühəndisliyi tərəfdaşıyıq."
+
+#: server/apps/base/templates/base/index.html:79
+msgid "More Projects"
+msgstr "Daha çox proyektlər"
+
+#: server/apps/base/templates/base/index.html:120
+msgid "Cross-Industry Expertise"
+msgstr "Sənayelərarası Ekspertizası"
+
+#: server/apps/base/templates/base/index.html:133
+msgid "Expertise & Leadership"
+msgstr "Ekspertiza və Liderlik"
+
+#: server/apps/base/templates/base/index.html:146
+msgid "Dedicate IT Solution"
+msgstr "Xüsusi Digital Həllər"
+
+#: server/apps/base/templates/base/index.html:166
+msgid "we serve all industries"
+msgstr "biz bütün sənaye sahələrinə xidmət edirik"
+
+#: server/apps/base/templates/base/index.html:167
+msgid "Top industries"
+msgstr "Üst səviyyə sənayelər"
+
+#: server/apps/base/templates/base/index.html:178
+msgid "Travel & Tourism"
+msgstr "Səyahət və Turizm"
+
+#: server/apps/base/templates/base/index.html:188
+msgid "Industry & Finance"
+msgstr "Sənaye və Maliyyə"
+
+#: server/apps/base/templates/base/index.html:198
+msgid "Media & Entertainment"
+msgstr "Media və Əyləncə"
+
+#: server/apps/base/templates/base/index.html:208
+msgid "Hotels & Restaurant"
+msgstr "Otellər və Restoran"
+
+#: server/apps/base/templates/base/index.html:218
+msgid "Healthcare Solution"
+msgstr "Səhiyyə Həllləri"
+
+#: server/apps/base/templates/base/index.html:228
+msgid "E-learning & Education"
+msgstr "Online və Fiziki Təhsil"
+
+#: server/apps/base/templates/base/index.html:238
+msgid "Web Development"
+msgstr "Digital İnkişaf"
+
 #: server/apps/base/templates/base/layout.html:64
 msgid "Home"
 msgstr "Ana Səhifə"
 
 #: server/apps/base/templates/base/layout.html:67
+#: server/apps/portfolio/templates/portfolio/index.html:26
+#: server/apps/portfolio/templates/portfolio/index.html:33
+#: server/apps/portfolio/templates/portfolio/index.html:52
+#: server/apps/portfolio/templates/portfolio/project.html:33
 msgid "Portfolio"
 msgstr "Portfolio"
 
 #: server/apps/base/templates/base/layout.html:77
-#: server/apps/base/templates/base/layout.html:262
+#: server/apps/base/templates/base/layout.html:266
 msgid "About"
 msgstr "Haqqımızda"
 
@@ -33,18 +346,13 @@ msgstr "Haqqımızda"
 msgid "Language"
 msgstr "Dil"
 
-#: server/apps/base/templates/base/layout.html:89
-#: server/apps/base/templates/base/layout.html:263
+#: server/apps/base/templates/base/layout.html:93
+#: server/apps/base/templates/base/layout.html:267
 msgid "Contact"
 msgstr "Əlaqə"
 
-#: server/apps/base/templates/base/layout.html:136
-#: server/apps/base/templates/base/layout.html:188
-msgid "About us"
-msgstr "Haqqımızda"
-
-#: server/apps/base/templates/base/layout.html:138
-#: server/apps/base/templates/base/layout.html:190
+#: server/apps/base/templates/base/layout.html:142
+#: server/apps/base/templates/base/layout.html:194
 msgid ""
 "CodeShift: Your Trusted Digital Solutions Partner. With over 6 years of "
 "experience in website and mobile app development, we deliver innovative and "
@@ -62,23 +370,57 @@ msgstr ""
 "nəticələr və müstəsna müştəri xidməti təqdim etməyə sadiqdir. Vizyonunuzu "
 "həyata keçirməyə kömək edək. Digital ehtiyaclarınız üçün bizi seçin."
 
-#: server/apps/base/templates/base/layout.html:146
-#: server/apps/base/templates/base/layout.html:149
-#: server/apps/base/templates/base/layout.html:198
-msgid "Contact us"
-msgstr "Əlaqə"
-
-#: server/apps/base/templates/base/layout.html:201
+#: server/apps/base/templates/base/layout.html:205
 msgid "Contacts"
 msgstr "Əlaqə vasitələrimiz"
 
-#: server/apps/base/templates/base/layout.html:248
+#: server/apps/base/templates/base/layout.html:252
 msgid "Services"
 msgstr "Xidmətlərimiz"
 
-#: server/apps/base/templates/base/layout.html:260
+#: server/apps/base/templates/base/layout.html:264
 msgid "Information"
 msgstr "Məlumat"
+
+#: server/apps/base/templates/base/layout.html:278
+msgid "All Rights Reserved"
+msgstr "Bütün haqları qorunur"
+
+#: server/apps/base/templates/base/layout.html:282
+msgid "Go On Top"
+msgstr "Ən başa qayıt"
+
+#: server/apps/portfolio/templates/portfolio/index.html:53
+msgid "Our recent projects"
+msgstr "Bizim ən son proyektlərimiz"
+
+#: server/apps/portfolio/templates/portfolio/project.html:62
+msgid "Client"
+msgstr "Müştəri"
+
+#: server/apps/portfolio/templates/portfolio/project.html:63
+msgid "Website"
+msgstr "Vebsayt"
+
+#: server/apps/portfolio/templates/portfolio/project.html:64
+msgid "Category"
+msgstr "Kateqoriya"
+
+#: server/apps/portfolio/templates/portfolio/project.html:79
+msgid "Project requirement"
+msgstr "Proyekt tələbləri"
+
+#: server/apps/portfolio/templates/portfolio/project.html:97
+msgid "Previous"
+msgstr "Əvvəlki"
+
+#: server/apps/portfolio/templates/portfolio/project.html:102
+msgid "Next"
+msgstr "Sonrakı"
+
+#: server/apps/portfolio/templates/portfolio/project.html:108
+msgid "Our similar projects"
+msgstr "Bizim oxşar proyektlərimiz"
 
 #: server/settings/components/internationalization.py:14
 msgid "Azerbaijani"

@@ -2,6 +2,8 @@
 
 {% load static %}
 
+{% load i18n %}
+
 {% block content %}
   <!-- Hero Section -->
   <section class="codeshift-hero-section pb-90 pt-80">
@@ -15,9 +17,9 @@
       <div class="row flex-lg-row flex-md-column-reverse">
         <div class="col-xl-5 col-lg-5">
           <div class="inner-content">
-            <h1 class="title wow fadeInUp" data-wow-delay="200ms" data-wow-duration="800ms">Empower your business with innovative digital solutions.</h1>
+            <h1 class="title wow fadeInUp" data-wow-delay="200ms" data-wow-duration="800ms">{% trans 'Empower your business with innovative digital solutions.' %}</h1>
             <div class="inner-btns mt-50">
-              <a href="{% url 'portfolio:index' %}" class="codeshift-btn wow fadeInUp" data-wow-delay="500ms" data-wow-duration="800ms">Our Portfolio</a>
+              <a href="{% url 'portfolio:index' %}" class="codeshift-btn wow fadeInUp" data-wow-delay="500ms" data-wow-duration="800ms">{% trans 'Our Portfolio' %}</a>
             </div>
             <div class="codeshift-social-links mt-140">
               <a href="{{ facebook }}" class="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="800ms" target="_blank">
@@ -37,13 +39,13 @@
                   <img src="{% static 'assets/images/icons/growth.png' %}" alt="" />
                 </div>
                 <div class="content">
-                  <h6>100% Business Growth</h6>
+                  <h6>{% trans '100% Business Growth' %}</h6>
                   <p><i class="fas fa-star"></i> <span>4.9</span></p>
                 </div>
               </div>
               <div class="item">
                 <div class="content">
-                  <h6>40+ Happy Clients</h6>
+                  <h6>{% trans '40+ Happy Clients' %}</h6>
                   <p><i class="fas fa-star"></i> <span>4.9</span></p>
                 </div>
               </div>
@@ -64,9 +66,9 @@
         <div class="col-xl-4">
           <div class="content-left-wrapper">
             <div class="codeshift-section-heading">
-              <span class="sub-heading">RECENT PROJECTS</span>
-              <h2 class="heading mb-25">Our latest projects</h2>
-              <p>Since 2015 we have been a visionary and a reliable software engineering partner for national brands.</p>
+              <span class="sub-heading">{% trans 'RECENT PROJECTS' %}</span>
+              <h2 class="heading mb-25">{% trans 'Our latest projects' %}</h2>
+              <p>{% trans 'Since 2015 we have been a visionary and a reliable software engineering partner for national brands.' %}</p>
             </div>
             <ul class="codeshift-project-filter list-unstyled d-flex align-items-center mt-35">
               <li class="active" data-filter="">All</li>
@@ -74,7 +76,7 @@
                 <li data-filter=".cat-{{ category.id }}">{{ category.name }}</li>
               {% endfor %}
             </ul>
-            <a href="{% url 'portfolio:index' %}" class="codeshift-btn mt-45">More Projects</a>
+            <a href="{% url 'portfolio:index' %}" class="codeshift-btn mt-45">{% trans 'More Projects' %}</a>
           </div>
         </div>
         <div class="col-xl-8">
@@ -115,7 +117,7 @@
                 <img src="{% static 'assets/images/icons/card-icon-1.png' %}" alt="" />
               </div>
               <div class="content">
-                <h4 class="title">Cross-Industry Expertise</h4>
+                <h4 class="title">{% trans 'Cross-Industry Expertise' %}</h4>
               </div>
               <div class="codeshift-dots">
                 <span></span>
@@ -128,7 +130,7 @@
                 <img src="{% static 'assets/images/icons/card-icon-2.png' %}" alt="" />
               </div>
               <div class="content">
-                <h4 class="title">Expertise & Leadership</h4>
+                <h4 class="title">{% trans 'Expertise & Leadership' %}</h4>
               </div>
               <div class="codeshift-dots">
                 <span></span>
@@ -141,7 +143,7 @@
                 <img src="{% static 'assets/images/icons/card-icon-3.png' %}" alt="" />
               </div>
               <div class="content">
-                <h4 class="title">Dedicate IT Solution</h4>
+                <h4 class="title">{% trans 'Dedicate IT Solution' %}</h4>
               </div>
               <div class="codeshift-dots">
                 <span></span>
@@ -161,8 +163,8 @@
       <div class="row justify-content-center">
         <div class="col-xl-6">
           <div class="codeshift-section-heading text-center mb-60">
-            <span class="sub-heading">we serve all industries</span>
-            <h2 class="heading">Top industries</h2>
+            <span class="sub-heading">{% trans 'we serve all industries' %}</span>
+            <h2 class="heading">{% trans 'Top industries' %}</h2>
           </div>
         </div>
       </div>
@@ -173,7 +175,7 @@
               <img src="{% static 'assets/images/icons/brand-icon-1.png' %}" alt="" />
             </div>
             <div class="content">
-              <h6 class="title">Travel & Tourism</h6>
+              <h6 class="title">{% trans 'Travel & Tourism' %}</h6>
             </div>
           </div>
         </div>
@@ -183,7 +185,7 @@
               <img src="{% static 'assets/images/icons/brand-icon-2.png' %}" alt="" />
             </div>
             <div class="content">
-              <h6 class="title">Industry & Finance</h6>
+              <h6 class="title">{% trans 'Industry & Finance' %}</h6>
             </div>
           </div>
         </div>
@@ -193,7 +195,7 @@
               <img src="{% static 'assets/images/icons/brand-icon-3.png' %}" alt="" />
             </div>
             <div class="content">
-              <h6 class="title">Media & Entertainment</h6>
+              <h6 class="title">{% trans 'Media & Entertainment' %}</h6>
             </div>
           </div>
         </div>
@@ -203,7 +205,7 @@
               <img src="{% static 'assets/images/icons/brand-icon-4.png' %}" alt="" />
             </div>
             <div class="content">
-              <h6 class="title">Hotels & Restaurant</h6>
+              <h6 class="title">{% trans 'Hotels & Restaurant' %}</h6>
             </div>
           </div>
         </div>
@@ -213,7 +215,7 @@
               <img src="{% static 'assets/images/icons/brand-icon-5.png' %}" alt="" />
             </div>
             <div class="content">
-              <h6 class="title">Healthcare Solution</h6>
+              <h6 class="title">{% trans 'Healthcare Solution' %}</h6>
             </div>
           </div>
         </div>
@@ -223,7 +225,7 @@
               <img src="{% static 'assets/images/icons/brand-icon-6.png' %}" alt="" />
             </div>
             <div class="content">
-              <h6 class="title">Elearning & Education</h6>
+              <h6 class="title">{% trans 'E-learning & Education' %}</h6>
             </div>
           </div>
         </div>
@@ -233,7 +235,7 @@
               <img src="{% static 'assets/images/icons/brand-icon-7.png' %}" alt="" />
             </div>
             <div class="content">
-              <h6 class="title">Web Development</h6>
+              <h6 class="title">{% trans 'Web Development' %}</h6>
             </div>
           </div>
         </div>

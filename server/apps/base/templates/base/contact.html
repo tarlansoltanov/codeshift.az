@@ -2,6 +2,8 @@
 
 {% load static %}
 
+{% load i18n %}
+
 {% block content %}
   <!-- Breadcrumb -->
   <section class="breadcrumb-area fix theme-dark-bg bg_img">
@@ -21,14 +23,14 @@
       <div class="row">
         <div class="col-xl-12">
           <div class="codeshift-breadcrumb-wrapper position-relative pt-190 pb-190">
-            <h2 class="page-title">Contact us</h2>
+            <h2 class="page-title">{% trans 'Contact us' %}</h2>
             <div class="codeshift-breadcrumb breadcrumbs">
               <ul class="list-unstyled d-flex align-items-center">
                 <li class="codeshift-item duxinbcrumb-begin">
-                  <a href="{% url 'base:home' %}"><span>Home Page</span></a>
+                  <a href="{% url 'base:home' %}"><span>{% trans 'Home Page' %}</span></a>
                 </li>
                 <li class="codeshift-item duxinbcrumb-end">
-                  <span>Contact us</span>
+                  <span>{% trans 'Contact us' %}</span>
                 </li>
               </ul>
             </div>
@@ -51,7 +53,7 @@
               <img src="{% static 'assets/images/icons/support-1.png' %}" alt="" />
             </div>
             <div class="content mt-25">
-              <h4 class="title">Visit Us Daily</h4>
+              <h4 class="title">{% trans 'Visit Us Daily' %}</h4>
               <p>
                 {{ address }}
               </p>
@@ -64,7 +66,7 @@
               <img src="{% static 'assets/images/icons/support-2.png' %}" alt="" />
             </div>
             <div class="content mt-25">
-              <h4 class="title">Contact Us</h4>
+              <h4 class="title">{% trans 'Contact Us' %}</h4>
               <p>
                 <a href="javascript:void(0)">{{ phone }}</a>
               </p>
@@ -77,7 +79,7 @@
               <img src="{% static 'assets/images/icons/support-3.png' %}" alt="" />
             </div>
             <div class="content mt-25">
-              <h4 class="title">Email Us</h4>
+              <h4 class="title">{% trans 'Email Us' %}</h4>
               <p>
                 <a href="mailto:{{ email }}">{{ email }}</a>
               </p>
@@ -94,8 +96,8 @@
       <div class="row justify-content-center">
         <div class="col-xl-8">
           <div class="codeshift-section-heading codeshift-section-heading__style-2 text-center mb-60">
-            <span class="sub-heading">Get free quote</span>
-            <h2 class="heading">Just have a quick any questions?</h2>
+            <span class="sub-heading">{% trans 'Get free quote' %}</span>
+            <h2 class="heading">{% trans 'Just have a quick any questions?' %}</h2>
           </div>
         </div>
       </div>
@@ -110,27 +112,27 @@
             <form action="{% url 'base:contact' %}" method="POST" id="contact-form">
               {% csrf_token %}
               <div class="codeshift-input-field mt-30">
-                <label for="name">Full Name *</label>
-                <input type="text" name="name" id="name" placeholder="Name Surname" />
+                <label for="name">{% trans 'Full Name' %} *</label>
+                <input type="text" name="name" id="name" placeholder="{% trans 'Name Surname' %}" />
               </div>
               <div class="codeshift-input-field mt-30">
-                <label for="phone">Phone *</label>
+                <label for="phone">{% trans 'Phone' %} *</label>
                 <input type="text" name="phone" id="phone" placeholder="+994 (xx) xxx xx xx" />
               </div>
 
               <div class="codeshift-input-field mt-30">
-                <label for="email">Email *</label>
+                <label for="email">{% trans 'Email' %} *</label>
                 <input type="email" name="email" id="email" placeholder="name.surname@example.com" />
               </div>
               <div class="codeshift-input-field mt-30">
-                <label for="subject">Subject *</label>
+                <label for="subject">{% trans 'Subject' %} *</label>
                 <input type="text" name="subject" id="subject" placeholder="Web, Mobile App..." />
               </div>
               <div class="codeshift-input-field mt-30">
-                <label for="message">Message *</label>
-                <textarea name="message" id="message" placeholder="Details of your project"></textarea>
+                <label for="message">{% trans 'Message' %} *</label>
+                <textarea name="message" id="message" placeholder="{% trans 'Details of your project' %}"></textarea>
               </div>
-              <button type="submit" class="codeshift-btn codeshift-btn__round mt-20">Submit Now</button>
+              <button type="submit" class="codeshift-btn codeshift-btn__round mt-20">{% trans 'Submit Now' %}</button>
               <p class="ajax-response"></p>
             </form>
           </div>

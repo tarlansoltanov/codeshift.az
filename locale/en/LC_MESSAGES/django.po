@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-14 18:17+0400\n"
-"PO-Revision-Date: 2023-05-15 18:49+0400\n"
+"POT-Creation-Date: 2023-05-15 20:22+0400\n"
+"PO-Revision-Date: 2023-05-15 20:25+0400\n"
 "Last-Translator:   <>\n"
 "Language: English\n"
 "MIME-Version: 1.0\n"
@@ -16,30 +16,344 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.9.9\n"
 
-#: server/apps/base/templates/base/layout.html:62
+#: server/apps/base/templates/base/about.html:26
+msgid "About CodeShift"
+msgstr "About CodeShift"
+
+#: server/apps/base/templates/base/about.html:30
+#: server/apps/base/templates/base/contact.html:30
+#: server/apps/portfolio/templates/portfolio/index.html:30
+#: server/apps/portfolio/templates/portfolio/project.html:30
+msgid "Home Page"
+msgstr "Home Page"
+
+#: server/apps/base/templates/base/about.html:33
+#: server/apps/base/templates/base/layout.html:140
+#: server/apps/base/templates/base/layout.html:192
+msgid "About us"
+msgstr "About us"
+
+#: server/apps/base/templates/base/about.html:52
+msgid "ABOUT US"
+msgstr "ABOUT US"
+
+#: server/apps/base/templates/base/about.html:53
+msgid "We provide High-quality Services."
+msgstr "We provide High-quality Services."
+
+#: server/apps/base/templates/base/about.html:59
+msgid ""
+"Since our founding, CodeShift has been a trusted provider of website and "
+"mobile app development services. Our company has a long history of creating "
+"innovative and high-quality digital products that help businesses and "
+"organizations connect with their target audience. With a team of experienced"
+" professionals who are passionate about digital solutions, we have "
+"established ourselves as a leading provider in the industry. Our commitment "
+"to delivering outstanding results and providing exceptional customer service"
+" has helped us build long-lasting relationships with our clients. Choose "
+"CodeShift, and benefit from our years of experience and expertise in the "
+"digital solutions space."
+msgstr ""
+"Since our founding, CodeShift has been a trusted provider of website and "
+"mobile app development services. Our company has a long history of creating "
+"innovative and high-quality digital products that help businesses and "
+"organizations connect with their target audience. With a team of experienced"
+" professionals who are passionate about digital solutions, we have "
+"established ourselves as a leading provider in the industry. Our commitment "
+"to delivering outstanding results and providing exceptional customer service"
+" has helped us build long-lasting relationships with our clients. Choose "
+"CodeShift, and benefit from our years of experience and expertise in the "
+"digital solutions space."
+
+#: server/apps/base/templates/base/about.html:94
+msgid "Our History"
+msgstr "Our History"
+
+#: server/apps/base/templates/base/about.html:96
+msgid ""
+"For over 6 years, CodeShift has been a visionary and reliable software "
+"engineering partner for world-class brands. We provide innovative and high-"
+"quality digital solutions tailored to each client's unique needs. With our "
+"years of experience and expertise, we guide you every step of the way, from "
+"concept to launch. Choose CodeShift for outstanding results and exceptional "
+"customer service."
+msgstr ""
+"For over 6 years, CodeShift has been a visionary and reliable software "
+"engineering partner for world-class brands. We provide innovative and high-"
+"quality digital solutions tailored to each client's unique needs. With our "
+"years of experience and expertise, we guide you every step of the way, from "
+"concept to launch. Choose CodeShift for outstanding results and exceptional "
+"customer service."
+
+#: server/apps/base/templates/base/about.html:112
+msgid "Our mission"
+msgstr "Our mission"
+
+#: server/apps/base/templates/base/about.html:114
+msgid ""
+"At CodeShift, we help our clients succeed in the digital world. We work "
+"closely with you to understand your unique needs and design custom solutions"
+" that achieve your business goals. From user-friendly websites to cutting-"
+"edge mobile apps, our innovative digital solutions are tailored to your "
+"specific requirements. Choose CodeShift for a partner that's committed to "
+"your success."
+msgstr ""
+"At CodeShift, we help our clients succeed in the digital world. We work "
+"closely with you to understand your unique needs and design custom solutions"
+" that achieve your business goals. From user-friendly websites to cutting-"
+"edge mobile apps, our innovative digital solutions are tailored to your "
+"specific requirements. Choose CodeShift for a partner that's committed to "
+"your success."
+
+#: server/apps/base/templates/base/about.html:130
+msgid "Our vision"
+msgstr "Our vision"
+
+#: server/apps/base/templates/base/about.html:132
+msgid ""
+"At CodeShift, we're passionate about delivering cutting-edge technology and "
+"outstanding design. Our expertise in a wide range of technologies enables us"
+" to make a real impact for our clients. We approach every project with a "
+"focus on innovation and collaboration, delivering results that exceed "
+"expectations. Choose us as your digital solutions partner and benefit from "
+"our commitment to excellence in technology and design."
+msgstr ""
+"At CodeShift, we're passionate about delivering cutting-edge technology and "
+"outstanding design. Our expertise in a wide range of technologies enables us"
+" to make a real impact for our clients. We approach every project with a "
+"focus on innovation and collaboration, delivering results that exceed "
+"expectations. Choose us as your digital solutions partner and benefit from "
+"our commitment to excellence in technology and design."
+
+#: server/apps/base/templates/base/about.html:153
+msgid "achievement"
+msgstr "achievement"
+
+#: server/apps/base/templates/base/about.html:154
+msgid "Some number of our achivement"
+msgstr "Some number of our achivement"
+
+#: server/apps/base/templates/base/about.html:169
+msgid "Satisfied Clients"
+msgstr "Satisfied Clients"
+
+#: server/apps/base/templates/base/about.html:182
+msgid "Project Completed"
+msgstr "Project Completed"
+
+#: server/apps/base/templates/base/about.html:194
+msgid "Bands Joined"
+msgstr "Bands Joined"
+
+#: server/apps/base/templates/base/about.html:206
+msgid "Team Member"
+msgstr "Team Member"
+
+#: server/apps/base/templates/base/about.html:221
+msgid "why choose us"
+msgstr "why choose us"
+
+#: server/apps/base/templates/base/about.html:222
+msgid "Custom IT solutions <br />for your business"
+msgstr "Custom IT solutions <br />for your business"
+
+#: server/apps/base/templates/base/about.html:228
+msgid ""
+"At CodeShift, our top priority is helping our clients succeed. We believe "
+"that when our clients thrive, we thrive. That's why we approach every "
+"project with a focus on delivering exceptional value and building long-"
+"lasting relationships with our clients. Whether you're looking to launch a "
+"cutting-edge website or mobile app, or you want to take your existing "
+"digital products to the next level, we're here to help. With our innovative "
+"solutions and passionate team of professionals, we're dedicated to "
+"delivering outstanding results that exceed your expectations. Choose "
+"CodeShift and experience the difference that comes from partnering with a "
+"digital solutions provider that truly cares about your success."
+msgstr ""
+"At CodeShift, our top priority is helping our clients succeed. We believe "
+"that when our clients thrive, we thrive. That's why we approach every "
+"project with a focus on delivering exceptional value and building long-"
+"lasting relationships with our clients. Whether you're looking to launch a "
+"cutting-edge website or mobile app, or you want to take your existing "
+"digital products to the next level, we're here to help. With our innovative "
+"solutions and passionate team of professionals, we're dedicated to "
+"delivering outstanding results that exceed your expectations. Choose "
+"CodeShift and experience the difference that comes from partnering with a "
+"digital solutions provider that truly cares about your success."
+
+#: server/apps/base/templates/base/contact.html:26
+#: server/apps/base/templates/base/contact.html:33
+#: server/apps/base/templates/base/layout.html:150
+#: server/apps/base/templates/base/layout.html:153
+#: server/apps/base/templates/base/layout.html:202
+msgid "Contact us"
+msgstr "Contact us"
+
+#: server/apps/base/templates/base/contact.html:56
+msgid "Visit Us Daily"
+msgstr "Visit Us Daily"
+
+#: server/apps/base/templates/base/contact.html:69
+msgid "Contact Us"
+msgstr "Contact Us"
+
+#: server/apps/base/templates/base/contact.html:82
+msgid "Email Us"
+msgstr "Email Us"
+
+#: server/apps/base/templates/base/contact.html:99
+msgid "Get free quote"
+msgstr "Get free quote"
+
+#: server/apps/base/templates/base/contact.html:100
+msgid "Just have a quick any questions?"
+msgstr "Just have a quick any questions?"
+
+#: server/apps/base/templates/base/contact.html:115
+msgid "Full Name"
+msgstr "Full Name"
+
+#: server/apps/base/templates/base/contact.html:116
+msgid "Name Surname"
+msgstr "Name Surname"
+
+#: server/apps/base/templates/base/contact.html:119
+msgid "Phone"
+msgstr "Phone"
+
+#: server/apps/base/templates/base/contact.html:124
+msgid "Email"
+msgstr "Email"
+
+#: server/apps/base/templates/base/contact.html:128
+msgid "Subject"
+msgstr "Subject"
+
+#: server/apps/base/templates/base/contact.html:132
+msgid "Message"
+msgstr "Message"
+
+#: server/apps/base/templates/base/contact.html:133
+msgid "Details of your project"
+msgstr "Details of your project"
+
+#: server/apps/base/templates/base/contact.html:135
+msgid "Submit Now"
+msgstr "Submit Now"
+
+#: server/apps/base/templates/base/index.html:20
+msgid "Empower your business with innovative digital solutions."
+msgstr "Empower your business with innovative digital solutions."
+
+#: server/apps/base/templates/base/index.html:22
+msgid "Our Portfolio"
+msgstr "Our Portfolio"
+
+#: server/apps/base/templates/base/index.html:42
+#, python-format
+msgid "100%% Business Growth"
+msgstr "100%% Business Growth"
+
+#: server/apps/base/templates/base/index.html:48
+msgid "40+ Happy Clients"
+msgstr "40+ Happy Clients"
+
+#: server/apps/base/templates/base/index.html:69
+msgid "RECENT PROJECTS"
+msgstr "RECENT PROJECTS"
+
+#: server/apps/base/templates/base/index.html:70
+msgid "Our latest projects"
+msgstr "Our latest projects"
+
+#: server/apps/base/templates/base/index.html:71
+msgid ""
+"Since 2015 we have been a visionary and a reliable software engineering "
+"partner for national brands."
+msgstr ""
+"Since 2015 we have been a visionary and a reliable software engineering "
+"partner for national brands."
+
+#: server/apps/base/templates/base/index.html:79
+msgid "More Projects"
+msgstr "More Projects"
+
+#: server/apps/base/templates/base/index.html:120
+msgid "Cross-Industry Expertise"
+msgstr "Cross-Industry Expertise"
+
+#: server/apps/base/templates/base/index.html:133
+msgid "Expertise & Leadership"
+msgstr "Expertise & Leadership"
+
+#: server/apps/base/templates/base/index.html:146
+msgid "Dedicate IT Solution"
+msgstr "Dedicate IT Solution"
+
+#: server/apps/base/templates/base/index.html:166
+msgid "we serve all industries"
+msgstr "we serve all industries"
+
+#: server/apps/base/templates/base/index.html:167
+msgid "Top industries"
+msgstr "Top industries"
+
+#: server/apps/base/templates/base/index.html:178
+msgid "Travel & Tourism"
+msgstr "Travel & Tourism"
+
+#: server/apps/base/templates/base/index.html:188
+msgid "Industry & Finance"
+msgstr "Industry & Finance"
+
+#: server/apps/base/templates/base/index.html:198
+msgid "Media & Entertainment"
+msgstr "Media & Entertainment"
+
+#: server/apps/base/templates/base/index.html:208
+msgid "Hotels & Restaurant"
+msgstr "Hotels & Restaurant"
+
+#: server/apps/base/templates/base/index.html:218
+msgid "Healthcare Solution"
+msgstr "Healthcare Solution"
+
+#: server/apps/base/templates/base/index.html:228
+msgid "E-learning & Education"
+msgstr "E-learning & Education"
+
+#: server/apps/base/templates/base/index.html:238
+msgid "Web Development"
+msgstr "Web Development"
+
+#: server/apps/base/templates/base/layout.html:64
 msgid "Home"
 msgstr "Home"
 
-#: server/apps/base/templates/base/layout.html:65
+#: server/apps/base/templates/base/layout.html:67
+#: server/apps/portfolio/templates/portfolio/index.html:26
+#: server/apps/portfolio/templates/portfolio/index.html:33
+#: server/apps/portfolio/templates/portfolio/index.html:52
+#: server/apps/portfolio/templates/portfolio/project.html:33
 msgid "Portfolio"
 msgstr "Portfolio"
 
-#: server/apps/base/templates/base/layout.html:75
-#: server/apps/base/templates/base/layout.html:260
+#: server/apps/base/templates/base/layout.html:77
+#: server/apps/base/templates/base/layout.html:266
 msgid "About"
 msgstr "About"
 
-#: server/apps/base/templates/base/layout.html:77
+#: server/apps/base/templates/base/layout.html:79
 msgid "Language"
 msgstr "Language"
 
-#: server/apps/base/templates/base/layout.html:87
-#: server/apps/base/templates/base/layout.html:261
+#: server/apps/base/templates/base/layout.html:93
+#: server/apps/base/templates/base/layout.html:267
 msgid "Contact"
 msgstr "Contact"
 
-#: server/apps/base/templates/base/layout.html:136
-#: server/apps/base/templates/base/layout.html:188
+#: server/apps/base/templates/base/layout.html:142
+#: server/apps/base/templates/base/layout.html:194
 msgid ""
 "CodeShift: Your Trusted Digital Solutions Partner. With over 6 years of "
 "experience in website and mobile app development, we deliver innovative and "
@@ -57,17 +371,57 @@ msgstr ""
 "customer service. Let us help you bring your vision to life. Choose "
 "CodeShift for your digital needs."
 
-#: server/apps/base/templates/base/layout.html:199
-msgid "Contact us"
-msgstr "Contact us"
+#: server/apps/base/templates/base/layout.html:205
+msgid "Contacts"
+msgstr "Contacts"
 
-#: server/apps/base/templates/base/layout.html:246
+#: server/apps/base/templates/base/layout.html:252
 msgid "Services"
 msgstr "Services"
 
-#: server/apps/base/templates/base/layout.html:258
+#: server/apps/base/templates/base/layout.html:264
 msgid "Information"
 msgstr "Information"
+
+#: server/apps/base/templates/base/layout.html:278
+msgid "All Rights Reserved"
+msgstr "All Rights Reserved"
+
+#: server/apps/base/templates/base/layout.html:282
+msgid "Go On Top"
+msgstr "Go On Top"
+
+#: server/apps/portfolio/templates/portfolio/index.html:53
+msgid "Our recent projects"
+msgstr "Our recent projects"
+
+#: server/apps/portfolio/templates/portfolio/project.html:62
+msgid "Client"
+msgstr "Client"
+
+#: server/apps/portfolio/templates/portfolio/project.html:63
+msgid "Website"
+msgstr "Website"
+
+#: server/apps/portfolio/templates/portfolio/project.html:64
+msgid "Category"
+msgstr "Category"
+
+#: server/apps/portfolio/templates/portfolio/project.html:79
+msgid "Project requirement"
+msgstr "Project requirement"
+
+#: server/apps/portfolio/templates/portfolio/project.html:97
+msgid "Previous"
+msgstr "Previous"
+
+#: server/apps/portfolio/templates/portfolio/project.html:102
+msgid "Next"
+msgstr "Next"
+
+#: server/apps/portfolio/templates/portfolio/project.html:108
+msgid "Our similar projects"
+msgstr "Our similar projects"
 
 #: server/settings/components/internationalization.py:14
 msgid "Azerbaijani"

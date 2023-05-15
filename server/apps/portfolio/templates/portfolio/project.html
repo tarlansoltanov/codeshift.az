@@ -2,6 +2,8 @@
 
 {% load static %} 
 
+{% load i18n %}
+
 {% block content %}
 <!-- Breadcrumb -->
 <section class="breadcrumb-area fix theme-dark-bg bg_img">
@@ -25,10 +27,10 @@
           <div class="codeshift-breadcrumb breadcrumbs">
             <ul class="list-unstyled d-flex align-items-center">
               <li class="codeshift-item duxinbcrumb-begin">
-                <a href="{% url 'base:home' %}"><span>Home Page</span></a>
+                <a href="{% url 'base:home' %}"><span>{% trans 'Home Page' %}</span></a>
               </li>
               <li class="codeshift-item duxinbcrumb-begin">
-                <a href="{% url 'portfolio:index' %}"><span>Portfolio</span></a>
+                <a href="{% url 'portfolio:index' %}"><span>{% trans 'Portfolio' %}</span></a>
               </li>
               <li class="codeshift-item duxinbcrumb-end">
                 <span>{{ project.name }} </span>
@@ -57,9 +59,9 @@
           <p>{{ project.description|linebreaks }}</p>
           <div class="navigation-border pb-25"></div>
           <ul class="list-unstyled portfolio-meta">
-            <li><span class="label">Client :</span> <span class="text">{{ project.client }}</span></li>
-            <li><span class="label">Website :</span> <span class="text">{{ project.website }}</span></li>
-            <li><span class="label">Category :</span> <span class="text">{{ project.category.name }}</span></li>
+            <li><span class="label">{% trans 'Client' %} :</span> <span class="text">{{ project.client }}</span></li>
+            <li><span class="label">{% trans 'Website' %} :</span> <span class="text">{{ project.website }}</span></li>
+            <li><span class="label">{% trans 'Category' %} :</span> <span class="text">{{ project.category.name }}</span></li>
           </ul>
         </div>
       </div>
@@ -74,7 +76,7 @@
         </div>
       </div>
       <div class="col-xl-12 mt-90">
-        <h2 class="codeshift-title mb-25">Project requirement</h2>
+        <h2 class="codeshift-title mb-25">{% trans 'Project requirement' %}</h2>
         <div class="row mt-none-15">
           <div class="col-12 mt-15">
             <ul class="list-unstyled Language-list-item d-flex row">
@@ -92,18 +94,18 @@
         <div class="codeshift-next-prev-wrapper mt-50">
           {% if project.previous %}
             <a href="{% url 'portfolio:project' pk=project.previous.id %}" class="codeshift-next-prev codeshift-next-prev__prev">
-              <span class="icon"><i class="far fa-arrow-left"></i></span><span class="text">Previous</span>
+              <span class="icon"><i class="far fa-arrow-left"></i></span><span class="text">{% trans 'Previous' %}</span>
             </a>
           {% endif %}
           {% if project.next %}
             <a href="{% url 'portfolio:project' pk=project.next.id %}" class="codeshift-next-prev codeshift-next-prev__next">
-              <span class="text">Next</span><span class="icon"><i class="far fa-arrow-right"></i></span>
+              <span class="text">{% trans 'Next' %}</span><span class="icon"><i class="far fa-arrow-right"></i></span>
             </a>
           {% endif %}
         </div>
       </div>
       <div class="col-xl-12 mt-90">
-        <h2 class="codeshift-title mb-40">Our similar projects</h2>
+        <h2 class="codeshift-title mb-40">{% trans 'Our similar projects' %}</h2>
         <div class="codeshift-project-carousel owl-carousel codeshift-slide-nav codeshift-slide-nav__style-3" data-project-carousel>
           {% for item in project.category.projects.all %}
             {% if item.id != project.id %}
