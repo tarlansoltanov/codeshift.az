@@ -16,6 +16,6 @@ python manage.py migrate --noinput
 
 # Apply translation compilation
 echo "Apply translation compilation"
-python manage.py compilemessages --noinput
+python manage.py compilemessages --exclude site-packages/
 
 exec $cmd

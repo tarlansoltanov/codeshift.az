@@ -1,6 +1,6 @@
 from django.utils.translation import gettext_lazy as _
 
-from server.settings.components.common import MIDDLEWARE
+from server.settings.components.common import MIDDLEWARE, INSTALLED_APPS
 from server.settings.components import BASE_DIR
 
 # Internationalization
@@ -25,3 +25,9 @@ USE_TZ = True
 LOCALE_PATHS = [
    BASE_DIR.joinpath('locale'),
 ]
+
+# Rosetta Configuration
+# For detailed information, see documentation :
+# https://django-rosetta.readthedocs.io/
+
+INSTALLED_APPS.insert(0, 'rosetta')

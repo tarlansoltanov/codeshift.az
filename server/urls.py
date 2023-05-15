@@ -19,6 +19,9 @@ from django.urls import path, include
 
 from django.conf.urls.i18n import i18n_patterns
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 from server.apps.base import urls as base_urls
 from server.apps.portfolio import urls as portfolio_urls
 
@@ -31,9 +34,8 @@ urlpatterns = i18n_patterns(
 
 urlpatterns += [path('i18n/', include('django.conf.urls.i18n')),]
 
-
-from django.conf import settings
-from django.conf.urls.static import static
+if 'rosetta' in settings.INSTALLED_APPS:
+    urlpatterns += [path('translations/', include('rosetta.urls'))]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
