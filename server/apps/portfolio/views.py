@@ -6,7 +6,7 @@ def index(request, template_name='portfolio/index.html', context={}):
     context['title'] = "Portfolio"
     context['selected'] = int(request.GET.get('category', 0))
 
-    context['projects'] = Project.objects.all()
+    context['projects'] = Project.objects.all().order_by('-created_at')
 
     return render(request, template_name, context)
 
