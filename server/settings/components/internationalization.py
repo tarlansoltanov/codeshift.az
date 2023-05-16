@@ -39,3 +39,9 @@ ROSETTA_SHOW_AT_ADMIN_PANEL = True
 ROSETTA_WSGI_AUTO_RELOAD = True
 
 ROSETTA_UWSGI_AUTO_RELOAD = True
+
+# Modeltranslation Configuration
+# For detailed information, see documentation :
+# https://django-rosetta.readthedocs.io/
+
+INSTALLED_APPS.insert(0, 'modeltranslation')
