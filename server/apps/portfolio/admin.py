@@ -1,10 +1,13 @@
 from django.contrib import admin
 from .models import Project, ProjectImage, Category, ProjectPoint
 
+from modeltranslation.admin import TranslationAdmin, TranslationStackedInline
+
 
 @admin.register(Category)
-class CategoryAdmin(admin.ModelAdmin):
+class CategoryAdmin(TranslationAdmin):
     list_display = ('name',)
+    group_fieldsets = True
 
 
 class ProjectImageInline(admin.StackedInline):
@@ -12,12 +15,13 @@ class ProjectImageInline(admin.StackedInline):
     extra = 1
 
 
-class ProjectPointInline(admin.StackedInline):
+class ProjectPointInline(TranslationStackedInline):
     model = ProjectPoint
     extra = 1
 
 
 @admin.register(Project)
-class ProjectAdmin(admin.ModelAdmin):
+class ProjectAdmin(TranslationAdmin):
     list_display = ('name', 'title', 'category', 'client', 'website')
     inlines = [ProjectImageInline, ProjectPointInline]
+    group_fieldsets = True
