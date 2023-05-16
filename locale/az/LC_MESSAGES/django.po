@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-15 20:22+0400\n"
-"PO-Revision-Date: 2023-05-15 20:25+0400\n"
+"POT-Creation-Date: 2023-05-16 13:03+0400\n"
+"PO-Revision-Date: 2023-05-16 18:47+0400\n"
 "Last-Translator:   <>\n"
 "Language: Azerbaijani\n"
 "MIME-Version: 1.0\n"
@@ -250,12 +250,12 @@ msgid "Our Portfolio"
 msgstr "Bizim Portfolio"
 
 #: server/apps/base/templates/base/index.html:42
-msgid "100% Business Growth"
-msgstr "100% Biznes inkişafı"
+msgid "Business Growth"
+msgstr "Biznes İnkişafı"
 
 #: server/apps/base/templates/base/index.html:48
-msgid "40+ Happy Clients"
-msgstr "40+ Məmnun müştəri"
+msgid "Happy Clients"
+msgstr "Məmnun müştəri"
 
 #: server/apps/base/templates/base/index.html:69
 msgid "RECENT PROJECTS"
@@ -270,8 +270,8 @@ msgid ""
 "Since 2015 we have been a visionary and a reliable software engineering "
 "partner for national brands."
 msgstr ""
-"2015-ci ildən biz beynəlxalq brendlər üçün uzaqgörən və etibarlı proqram "
-"mühəndisliyi tərəfdaşıyıq."
+"2015-ci ildən biz beynəlxalq brendlər üçün qabaqcıl texnologiya və görkəmli "
+"dizayn təqdim etməyə çalışırıq"
 
 #: server/apps/base/templates/base/index.html:79
 msgid "More Projects"

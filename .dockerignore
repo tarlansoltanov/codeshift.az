@@ -1,4 +1,10 @@
+.venv/**/*
 .venv
+
+.vscode/**/*
 .vscode
+
+staticfiles/**/*
 staticfiles
-db.sqlite3
+
+*.sqlite3
