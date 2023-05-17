@@ -1,10 +1,15 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
+from django.utils import translation
 
 from .models import Message
 from .forms import MessageForm
 
 from ..portfolio.models import Project
 
+
+def index(request):
+    translation.activate('az')
+    return redirect('base:home')
 
 def home(request, template_name='base/index.html', context={}):
     context['title'] = 'Home'

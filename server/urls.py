@@ -32,6 +32,8 @@ urlpatterns = i18n_patterns(
     path('portfolio/', include(portfolio_urls, namespace='portfolio')),
 )
 
+urlpatterns += [path('', base_urls.views.index, name='index')]
+
 urlpatterns += [path('i18n/', include('django.conf.urls.i18n')),]
 
 if 'rosetta' in settings.INSTALLED_APPS:
