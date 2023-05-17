@@ -9,16 +9,20 @@ SECRET_KEY = config("DJANGO_SECRET_KEY")
 
 DEBUG = False
 
-ALLOWED_HOSTS = []
-
-ALLOWED_HOSTS.extend(config('DOMAIN_NAMES', cast=lambda v: [s.strip() for s in v.split(',')]) or [])
-ALLOWED_HOSTS.extend(config('DOMAIN_IPS', cast=lambda v: [s.strip() for s in v.split(',')]) or [])
+ALLOWED_HOSTS = [
+    config("DOMAIN_NAME"), 
+    config("DOMAIN_IP"), 
+    f'www.{config("DOMAIN_NAME")}', 
+    'web'
+]
 
 DATABASES['default']['CONN_MAX_AGE'] = 500
 
 # CSRF settings
 
-CSRF_TRUSTED_ORIGINS = []
-
-CSRF_TRUSTED_ORIGINS.extend(config('DOMAIN_NAMES', cast=lambda v: [f"http://{s.strip()}" for s in v.split(',')]) or [])
-CSRF_TRUSTED_ORIGINS.extend(config('DOMAIN_IPS', cast=lambda v: [f"http://{s.strip()}" for s in v.split(',')]) or [])
+CSRF_TRUSTED_ORIGINS = [
+    f'http://{config("DOMAIN_NAME")}', 
+    f'http://www.{config("DOMAIN_NAME")}', 
+    f'http://{config("DOMAIN_IP")}', 
+    'http://web'
+]
