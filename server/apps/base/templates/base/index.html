@@ -19,7 +19,7 @@
           <div class="inner-content">
             <h1 class="title wow fadeInUp" data-wow-delay="200ms" data-wow-duration="800ms">{% trans 'Empower your business with innovative digital solutions.' %}</h1>
             <div class="inner-btns mt-50">
-              <a href="{% url 'portfolio:index' %}" class="codeshift-btn wow fadeInUp" data-wow-delay="500ms" data-wow-duration="800ms">{% trans 'Our Portfolio' %}</a>
+              <a href="{% url 'portfolio:index' %}" class="codeshift-btn wow fadeInUp" data-wow-delay="500ms" data-wow-duration="800ms">{% trans 'Our Portfolio' %}<span></span></a>
             </div>
             <div class="codeshift-social-links mt-140">
               <a href="{{ facebook }}" class="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="800ms" target="_blank">
@@ -76,7 +76,7 @@
                 <li data-filter=".cat-{{ category.id }}">{{ category.name }}</li>
               {% endfor %}
             </ul>
-            <a href="{% url 'portfolio:index' %}" class="codeshift-btn mt-45">{% trans 'More Projects' %}</a>
+            <a href="{% url 'portfolio:index' %}" class="codeshift-btn mt-45">{% trans 'More Projects' %}<span></span></a>
           </div>
         </div>
         <div class="col-xl-8">
