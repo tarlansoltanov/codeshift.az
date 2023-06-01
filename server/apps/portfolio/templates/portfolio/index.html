@@ -60,7 +60,7 @@
           <ul class="codeshift-project-filter codeshift-project-filter__style-2 list-unstyled d-flex align-items-center">
             <li {% if selected == 0 %}class="active"{% endif %} data-filter="">All</li>
             {% for category in categories %}
-              <li {% if selected == category.id %}class="active"{% endif %} data-filter=".cat-{{ category.id }}">{{ category.name }}</li>
+              <li id="cat-{{ category.id }}" {% if selected == category.id %}class="active"{% endif %} data-filter=".cat-{{ category.id }}">{{ category.name }}</li>
             {% endfor %}
           </ul>
         </div>
@@ -93,3 +93,14 @@
   </div>
 </div>
 {% endblock content %}
+
+
+{% block scripts %}
+  <script>
+    if(window.location.href.includes("category")) {
+      let category_id = window.location.href.split("/").pop().slice(10);
+      document.querySelector(`#cat-${category_id}`).click();
+    }
+  </script>
+{% endblock scripts %}
+  
