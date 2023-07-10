@@ -14,7 +14,7 @@ def index(request):
 def home(request, template_name='base/index.html', context={}):
     context['title'] = 'Home'
 
-    context['projects'] = Project.objects.all().order_by('-created_at')[:3]
+    context['projects'] = Project.objects.all().order_by('-modified_at')[:3]
 
     return render(request, template_name, context)
 

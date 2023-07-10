@@ -12,6 +12,7 @@ class Project(models.Model):
     website = models.CharField("Website", max_length=250, blank=True, null=True)
     banner = models.ImageField("Banner", upload_to='portfolio/banners')
     cover = models.ImageField("Cover", upload_to='portfolio/covers')
+    modified_at = models.DateTimeField("Modified At", auto_now=True)
     created_at = models.DateTimeField("Created At", auto_now_add=True)
 
     class Meta:
