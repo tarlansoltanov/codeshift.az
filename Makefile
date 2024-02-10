@@ -16,7 +16,7 @@ run:
 
 logs:
 	@echo "Logs"
-	docker compose -f $(compose-dev) -f $(compose-prod) logs $(service)
+	docker compose -f $(compose-dev) -f $(compose-prod) logs $(service) -f
 
 restart:
 	@echo "Restarting Service"

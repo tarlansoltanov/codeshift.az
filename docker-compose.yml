@@ -22,7 +22,7 @@ services:
     volumes:
       - .:/usr/src/app
       - static:/var/www/static
-      - media:/var/www/media
+      - ./media:/var/www/media
     environment:
       - DJANGO_ENV=development
     ports:
