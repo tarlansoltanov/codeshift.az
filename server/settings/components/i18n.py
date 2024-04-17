@@ -4,7 +4,7 @@ from server.settings.components import BASE_DIR
 from server.settings.components.common import INSTALLED_APPS, MIDDLEWARE
 
 # Internationalization
-# https://docs.djangoproject.com/en/4.2/topics/i18n/
+# https://docs.djangoproject.com/en/5.0/topics/i18n/
 
 MIDDLEWARE.insert(2, "django.middleware.locale.LocaleMiddleware")
 
