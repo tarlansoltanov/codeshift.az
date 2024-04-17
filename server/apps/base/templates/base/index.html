@@ -74,12 +74,15 @@
             <span class="sub-heading">{% trans 'RECENT PROJECTS' %}</span>
             <h2 class="heading mb-25">{% trans 'Our latest projects' %}</h2>
             <p>
-              {% trans 'Since 2015 we have been a visionary and a reliable software engineering partner for national
-              brands.' %}
+              {% blocktrans %}
+              Since 2015 we have been a visionary and a reliable software engineering partner for national brands.
+              {% endblocktrans %}
             </p>
           </div>
-          <a href="{% url 'portfolio:portfolio' %}" class="codeshift-btn mt-45">{% trans 'More Projects'
-            %}<span></span></a>
+          <a href="{% url 'portfolio:portfolio' %}" class="codeshift-btn mt-45">
+            {% trans 'More Projects'%}
+            <span></span>
+          </a>
         </div>
       </div>
       <div class="col-xl-8">
