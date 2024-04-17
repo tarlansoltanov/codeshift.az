@@ -1,8 +1,18 @@
 from django.shortcuts import HttpResponse
-from django.views.generic import TemplateView
+from django.urls import reverse
+from django.utils import translation
+from django.views.generic import RedirectView, TemplateView
 
 from server.apps.base.logic.forms import MessageForm
 from server.apps.portfolio.models import Project
+
+
+class IndexView(RedirectView):
+    """Index view."""
+
+    def get_redirect_url(self, *args, **kwargs):
+        translation.activate("az")
+        return reverse("base:home")
 
 
 class HomeView(TemplateView):
