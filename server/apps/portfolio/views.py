@@ -1,10 +1,11 @@
 from django.views.generic import TemplateView
 
-from .models import Project
+from server.apps.portfolio.models import Project
 
 
 class PortfolioView(TemplateView):
     """Portfolio view."""
+
     template_name = "portfolio/index.html"
 
     def get_context_data(self, **kwargs):

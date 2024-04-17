@@ -13,13 +13,13 @@ class Contact(models.Model):
     class Meta:
         """Meta definition for Contact."""
 
-        verbose_name = 'Contact Details'
-        verbose_name_plural = 'Contact Details'
+        verbose_name = "Contact Details"
+        verbose_name_plural = "Contact Details"
 
     def __str__(self):
         """Unicode representation of Contact."""
         return "Contact Details"
-    
+
 
 class Message(models.Model):
     """Model definition for Message."""
@@ -34,10 +34,9 @@ class Message(models.Model):
     class Meta:
         """Meta definition for Message."""
 
-        verbose_name = 'Message'
-        verbose_name_plural = 'Messages'
+        verbose_name = "Message"
+        verbose_name_plural = "Messages"
 
     def __str__(self):
         """Unicode representation of Message."""
         return self.name
-

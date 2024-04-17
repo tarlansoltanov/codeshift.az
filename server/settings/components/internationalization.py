@@ -1,36 +1,36 @@
 from django.utils.translation import gettext_lazy as _
 
-from server.settings.components.common import MIDDLEWARE, INSTALLED_APPS
 from server.settings.components import BASE_DIR
+from server.settings.components.common import INSTALLED_APPS, MIDDLEWARE
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-MIDDLEWARE.insert(2, 'django.middleware.locale.LocaleMiddleware')
+MIDDLEWARE.insert(2, "django.middleware.locale.LocaleMiddleware")
 
-LANGUAGE_CODE = 'az'
+LANGUAGE_CODE = "az"
 
 LANGUAGES = (
-   ('az', _('Azerbaijani')),
-   ('en', _('English')),
-   ('ru', _('Russian')),
+    ("az", _("Azerbaijani")),
+    ("en", _("English")),
+    ("ru", _("Russian")),
 )
 
-TIME_ZONE = 'Asia/Baku'
+TIME_ZONE = "Asia/Baku"
 
 USE_I18N = True
 
 USE_TZ = True
 
 LOCALE_PATHS = [
-   BASE_DIR.joinpath('locale'),
+    BASE_DIR.joinpath("locale"),
 ]
 
 # Rosetta Configuration
 # For detailed information, see documentation :
 # https://django-rosetta.readthedocs.io/
 
-INSTALLED_APPS.insert(0, 'rosetta')
+INSTALLED_APPS.insert(0, "rosetta")
 
 ROSETTA_AUTO_COMPILE = True
 
@@ -44,4 +44,4 @@ ROSETTA_UWSGI_AUTO_RELOAD = True
 # For detailed information, see documentation :
 # https://django-rosetta.readthedocs.io/
 
-INSTALLED_APPS.insert(0, 'modeltranslation')
+INSTALLED_APPS.insert(0, "modeltranslation")

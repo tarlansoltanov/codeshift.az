@@ -1,7 +1,7 @@
 compose-dev = docker-compose.yml
 compose-prod = docker/docker-compose.prod.yml
 
-service := 
+service :=
 language := en
 
 .PHONY: run

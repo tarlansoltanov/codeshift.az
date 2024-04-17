@@ -1,16 +1,10 @@
-from .models import Contact
+from server.apps.base.models import Contact
 
 
 def contact_details(request):
     if not Contact.objects.exists():
-        return {
-            "email": "",
-            "phone": "",
-            "address": "",
-            "instagram": "",
-            "facebook": ""
-        }
-        
+        return {"email": "", "phone": "", "address": "", "instagram": "", "facebook": ""}
+
     contacts = Contact.objects.first()
 
     return {
@@ -18,5 +12,5 @@ def contact_details(request):
         "phone": contacts.phone,
         "address": contacts.address,
         "instagram": contacts.instagram,
-        "facebook": contacts.facebook
+        "facebook": contacts.facebook,
     }
