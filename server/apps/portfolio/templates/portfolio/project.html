@@ -1,6 +1,6 @@
-{% extends 'base/layout.html' %} 
+{% extends 'base/layout.html' %}
 
-{% load static %} 
+{% load static %}
 
 {% load i18n %}
 
@@ -30,7 +30,7 @@
                 <a href="{% url 'base:home' %}"><span>{% trans 'Home Page' %}</span></a>
               </li>
               <li class="codeshift-item duxinbcrumb-begin">
-                <a href="{% url 'portfolio:index' %}"><span>{% trans 'Portfolio' %}</span></a>
+                <a href="{% url 'portfolio:portfolio' %}"><span>{% trans 'Portfolio' %}</span></a>
               </li>
               <li class="codeshift-item duxinbcrumb-end">
                 <span>{{ project.name }} </span>
@@ -61,17 +61,18 @@
           <ul class="list-unstyled portfolio-meta">
             <li><span class="label">{% trans 'Client' %} :</span> <span class="text">{{ project.client }}</span></li>
             <li><span class="label">{% trans 'Website' %} :</span> <span class="text">{{ project.website }}</span></li>
-            <li><span class="label">{% trans 'Category' %} :</span> <span class="text">{{ project.category.name }}</span></li>
+            <li><span class="label">{% trans 'Category' %} :</span> <span class="text">{{ project.category.name
+                }}</span></li>
           </ul>
         </div>
       </div>
       <div class="col-xl-12">
         <div class="portfolio-details-carousel mt-45 owl-carousel" data-portfolio-details-carousel>
           {% for item in project.images.all %}
-            <!-- Item -->
-            <div class="portfolio-details-carousel__item">
-              <img class="portfolio-details-img" src="{{ item.image.url }}" alt="" />
-            </div>
+          <!-- Item -->
+          <div class="portfolio-details-carousel__item">
+            <img class="portfolio-details-img" src="{{ item.image.url }}" alt="" />
+          </div>
           {% endfor %}
         </div>
       </div>
@@ -81,10 +82,10 @@
           <div class="col-12 mt-15">
             <ul class="list-unstyled Language-list-item d-flex row">
               {% for item in project.points.all %}
-                <li class="col-6">
-                  <img src="{% static 'assets/images/icons/double-arrow.png' %}" alt="" />
-                  {{ item.point }}
-                </li>
+              <li class="col-6">
+                <img src="{% static 'assets/images/icons/double-arrow.png' %}" alt="" />
+                {{ item.point }}
+              </li>
               {% endfor %}
             </ul>
           </div>
@@ -93,37 +94,40 @@
         <div class="navigation-border mt-50"></div>
         <div class="codeshift-next-prev-wrapper mt-50">
           {% if project.previous %}
-            <a href="{% url 'portfolio:project' pk=project.previous.id %}" class="codeshift-next-prev codeshift-next-prev__prev">
-              <span class="icon"><i class="far fa-arrow-left"></i></span><span class="text">{% trans 'Previous' %}</span>
-            </a>
+          <a href="{% url 'portfolio:project' pk=project.previous.id %}"
+            class="codeshift-next-prev codeshift-next-prev__prev">
+            <span class="icon"><i class="far fa-arrow-left"></i></span><span class="text">{% trans 'Previous' %}</span>
+          </a>
           {% endif %}
           {% if project.next %}
-            <a href="{% url 'portfolio:project' pk=project.next.id %}" class="codeshift-next-prev codeshift-next-prev__next">
-              <span class="text">{% trans 'Next' %}</span><span class="icon"><i class="far fa-arrow-right"></i></span>
-            </a>
+          <a href="{% url 'portfolio:project' pk=project.next.id %}"
+            class="codeshift-next-prev codeshift-next-prev__next">
+            <span class="text">{% trans 'Next' %}</span><span class="icon"><i class="far fa-arrow-right"></i></span>
+          </a>
           {% endif %}
         </div>
       </div>
       <div class="col-xl-12 mt-90">
         <h2 class="codeshift-title mb-40">{% trans 'Our similar projects' %}</h2>
-        <div class="codeshift-project-carousel owl-carousel codeshift-slide-nav codeshift-slide-nav__style-3" data-project-carousel>
+        <div class="codeshift-project-carousel owl-carousel codeshift-slide-nav codeshift-slide-nav__style-3"
+          data-project-carousel>
           {% for item in project.category.projects.all %}
-            {% if item.id != project.id %}
-            <!-- Item -->
-            <div class="codeshift-project-item codeshift-project-item__style-2">
-              <div class="content">
-                <h4 class="title">
-                  <a href="{% url 'portfolio:project' pk=item.id %}">{{ item.name }}</a>
-                </h4>
-                <a href="{% url 'portfolio:project' pk=item.id %}" class="inline-btn">
-                  <i class="far fa-arrow-right"></i>
-                </a>
-              </div>
-              <div class="thumb">
-                <img src="{{ item.cover.url }}" alt="" />
-              </div>
+          {% if item.id != project.id %}
+          <!-- Item -->
+          <div class="codeshift-project-item codeshift-project-item__style-2">
+            <div class="content">
+              <h4 class="title">
+                <a href="{% url 'portfolio:project' pk=item.id %}">{{ item.name }}</a>
+              </h4>
+              <a href="{% url 'portfolio:project' pk=item.id %}" class="inline-btn">
+                <i class="far fa-arrow-right"></i>
+              </a>
             </div>
-            {% endif %}
+            <div class="thumb">
+              <img src="{{ item.cover.url }}" alt="" />
+            </div>
+          </div>
+          {% endif %}
           {% endfor %}
         </div>
       </div>

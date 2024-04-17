@@ -1,18 +1,32 @@
-from django.shortcuts import render
+from django.views.generic import TemplateView
+
 from .models import Project
 
 
-def index(request, template_name="portfolio/index.html", context={}):
-    context["title"] = "Portfolio"
+class PortfolioView(TemplateView):
+    """Portfolio view."""
+    template_name = "portfolio/index.html"
 
-    context["projects"] = Project.objects.all().order_by("-modified_at")
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
 
-    return render(request, template_name, context)
+        context["title"] = "Portfolio"
+
+        context["projects"] = Project.objects.all().order_by("-modified_at")
+
+        return context
 
 
-def project(request, pk, template_name="portfolio/project.html", context={}):
-    context["title"] = "Project Details"
+class ProjectView(TemplateView):
+    """Project view."""
 
-    context["project"] = Project.objects.get(pk=pk)
+    template_name = "portfolio/project.html"
 
-    return render(request, template_name, context)
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        context["title"] = "Project Details"
+
+        context["project"] = Project.objects.get(pk=kwargs["pk"])
+
+        return context

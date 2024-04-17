@@ -1,9 +1,9 @@
 from django.urls import path
-from . import views
+from server.apps.portfolio.views import PortfolioView, ProjectView
 
-app_name = 'server.apps.portfolio'
+app_name = 'portfolio'
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('<int:pk>/', views.project, name='project'),
+    path('', PortfolioView.as_view(), name='portfolio'),
+    path('<int:pk>/', ProjectView.as_view(), name='project'),
 ]

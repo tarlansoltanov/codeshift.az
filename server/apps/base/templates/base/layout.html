@@ -64,7 +64,7 @@
                   <ul>
                     <li class=""><a href="{% url 'base:home' %}">{% trans 'Home' %}</a></li>
 
-                    <li class=""><a href="{% url 'portfolio:index' %}">{% trans 'Our Projects' %}</a></li>
+                    <li class=""><a href="{% url 'portfolio:portfolio' %}">{% trans 'Our Projects' %}</a></li>
 
                     <li><a href="{% url 'base:about' %}">{% trans 'About' %}</a></li>
 
@@ -252,7 +252,7 @@
               <ul>
                 {% for category in categories %}
                 <li>
-                  <a href="{% url 'portfolio:index' %}?category={{ category.id }}">{{ category.name }}</a>
+                  <a href="{% url 'portfolio:portfolio' %}?category={{ category.id }}">{{ category.name }}</a>
                 </li>
                 {% endfor %}
               </ul>

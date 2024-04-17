@@ -1,40 +1,59 @@
-from django.shortcuts import render, HttpResponse, redirect
-from django.utils import translation
+from django.shortcuts import HttpResponse
+from django.views.generic import TemplateView
 
-from .models import Message
 from .forms import MessageForm
 
 from ..portfolio.models import Project
 
 
-def index(request):
-    translation.activate('az')
-    return redirect('base:home')
+class HomeView(TemplateView):
+    """Home view."""
 
-def home(request, template_name='base/index.html', context={}):
-    context['title'] = 'Home'
+    template_name = 'base/index.html'
 
-    context['projects'] = Project.objects.all().order_by('-modified_at')[:3]
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
 
-    return render(request, template_name, context)
+        context['title'] = 'Home'
 
+        context['projects'] = Project.objects.all().order_by('-modified_at')[:4]
 
-def about(request, template_name='base/about.html', context={}):
-    context['title'] = 'About'
-    return render(request, template_name, context)
+        return context
+    
 
+class AboutView(TemplateView):
+    """About view."""
 
-def contact(request, template_name='base/contact.html', context={}):
-    context['title'] = 'Contact'
+    template_name = 'base/about.html'
 
-    form = MessageForm(request.POST or None)
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
 
-    if request.method == 'POST' and request.accepts("application/json"):
-        if form.is_valid():
+        context['title'] = 'About'
+
+        return context
+    
+
+class ContactView(TemplateView):
+    """Contact view."""
+
+    template_name = 'base/contact.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        context['title'] = 'Contact'
+
+        context['form'] = MessageForm()
+
+        return context
+    
+    def post(self, request, *args, **kwargs):
+        form = MessageForm(request.POST)
+
+        if form.is_valid() and request.accepts("application/json"):
             form.save()
 
             return HttpResponse('Message sent successfully')
 
         return HttpResponse('Please fill all the fields correctly!', status=400)
-
-    return render(request, template_name, context)
