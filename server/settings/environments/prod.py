@@ -7,6 +7,7 @@ SECRET_KEY = config("DJANGO_SECRET_KEY")
 DEBUG = False
 
 ALLOWED_HOSTS = [
+    f'www.{config("DOMAIN_NAME")}',
     config("DOMAIN_NAME"),
     config("DOMAIN_IP"),
     # We need this value for `healthcheck` to work:
