@@ -1,6 +1,6 @@
 from django.views.generic import TemplateView
 
-from server.apps.portfolio.models import Project
+from server.apps.portfolio.models import Category, Project
 
 
 class PortfolioView(TemplateView):
@@ -29,5 +29,20 @@ class ProjectView(TemplateView):
         context["title"] = "Project Details"
 
         context["project"] = Project.objects.get(pk=kwargs["pk"])
+
+        return context
+
+
+class CategoryView(TemplateView):
+    """Category view."""
+
+    template_name = "portfolio/category.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        context["category"] = Category.objects.get(pk=kwargs["pk"])
+
+        context["title"] = context["category"].name
 
         return context

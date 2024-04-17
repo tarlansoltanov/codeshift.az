@@ -252,7 +252,7 @@
               <ul>
                 {% for category in categories %}
                 <li>
-                  <a href="{% url 'portfolio:portfolio' %}?category={{ category.id }}">{{ category.name }}</a>
+                  <a href="{% url 'portfolio:category' pk=category.id %}">{{ category.name }}</a>
                 </li>
                 {% endfor %}
               </ul>

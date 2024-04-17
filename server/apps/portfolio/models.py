@@ -4,18 +4,20 @@ from django.db import models
 class Project(models.Model):
     """Model definition for Project."""
 
-    name = models.CharField("Name", max_length=50)
-    title = models.CharField("Title", max_length=250)
-    description = models.TextField("Description")
-    client = models.CharField("Client", max_length=50)
-    category = models.ForeignKey(
-        "Category", verbose_name="Category", on_delete=models.CASCADE, related_name="projects"
-    )
-    website = models.CharField("Website", max_length=250, blank=True, null=True)
-    banner = models.ImageField("Banner", upload_to="portfolio/banners")
-    cover = models.ImageField("Cover", upload_to="portfolio/covers")
-    modified_at = models.DateTimeField("Modified At", auto_now=True)
-    created_at = models.DateTimeField("Created At", auto_now_add=True)
+    name = models.CharField(max_length=50)
+    title = models.CharField(max_length=250)
+
+    category = models.ForeignKey("Category", on_delete=models.CASCADE, related_name="projects")
+
+    client = models.CharField(max_length=50)
+    website = models.CharField(max_length=250, blank=True, null=True)
+    banner = models.ImageField(upload_to="portfolio/banners")
+    cover = models.ImageField(upload_to="portfolio/covers")
+
+    description = models.TextField()
+
+    modified_at = models.DateTimeField(auto_now=True)
+    created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         """Meta definition for Project."""
@@ -33,19 +35,21 @@ class Project(models.Model):
     def previous(self):
         if self.pk == Project.objects.first().pk:
             return None
+
         return Project.objects.filter(pk__lt=self.pk).last()
 
     def next(self):
         if self.pk == Project.objects.last().pk:
             return None
+
         return Project.objects.filter(pk__gt=self.pk).first()
 
 
 class ProjectPoint(models.Model):
     """Model definition for ProjectPoint."""
 
-    project = models.ForeignKey("Project", verbose_name="Project", on_delete=models.CASCADE, related_name="points")
-    point = models.CharField("Point", max_length=250)
+    project = models.ForeignKey("Project", on_delete=models.CASCADE, related_name="points")
+    point = models.CharField(max_length=250)
 
     class Meta:
         """Meta definition for ProjectPoint."""
@@ -61,8 +65,8 @@ class ProjectPoint(models.Model):
 class ProjectImage(models.Model):
     """Model definition for ProjectImage."""
 
-    image = models.ImageField("Image", upload_to="portfolio/images")
-    project = models.ForeignKey("Project", verbose_name="Project", on_delete=models.CASCADE, related_name="images")
+    image = models.ImageField(upload_to="portfolio/images")
+    project = models.ForeignKey("Project", on_delete=models.CASCADE, related_name="images")
 
     class Meta:
         """Meta definition for ProjectImage."""
@@ -78,7 +82,7 @@ class ProjectImage(models.Model):
 class Category(models.Model):
     """Model definition for Category."""
 
-    name = models.CharField("Name", max_length=50)
+    name = models.CharField(max_length=50)
 
     class Meta:
         """Meta definition for Category."""

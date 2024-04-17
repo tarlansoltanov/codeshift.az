@@ -22,6 +22,14 @@ class ProjectPointInline(TranslationStackedInline):
 
 @admin.register(Project)
 class ProjectAdmin(TranslationAdmin):
-    list_display = ("name", "title", "category", "client", "website")
     inlines = [ProjectImageInline, ProjectPointInline]
+
     group_fieldsets = True
+
+    list_display = (
+        "name",
+        "title",
+        "category",
+        "client",
+        "website",
+    )

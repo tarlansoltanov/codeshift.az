@@ -14,8 +14,8 @@ INSTALLED_APPS += [
 # https://docs.djangoproject.com/en/5.0/ref/templates/api/#writing-your-own-context-processors
 
 TEMPLATES[0]["OPTIONS"]["context_processors"] += [
-    "server.apps.base.context_processors.contact_details",
-    "server.apps.portfolio.context_processors.categories",
+    "server.apps.base.logic.processors.contact_details",
+    "server.apps.portfolio.logic.processors.categories",
 ]
 
 # Static and media files (CSS, JavaScript, Images)
@@ -33,3 +33,10 @@ STATICFILES_FINDERS = [
 MEDIA_URL = "/media/"
 
 MEDIA_ROOT = BASE_DIR / "media"
+
+# Modeltranslation
+# https://django-modeltranslation.readthedocs.io/en/latest/
+
+MODELTRANSLATION_TRANSLATION_FILES = [
+    "server.apps.portfolio.logic.translation",
+]

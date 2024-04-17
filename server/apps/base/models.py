@@ -4,11 +4,11 @@ from django.db import models
 class Contact(models.Model):
     """Model definition for Contact."""
 
-    email = models.EmailField("Email", max_length=254)
-    phone = models.CharField("Phone", max_length=50)
-    address = models.CharField("Address", max_length=50)
-    instagram = models.URLField("Instagram URL", max_length=200)
-    facebook = models.URLField("Facebook URL", max_length=200)
+    email = models.EmailField(max_length=254)
+    phone = models.CharField(max_length=50)
+    address = models.CharField(max_length=50)
+    instagram = models.URLField(max_length=200)
+    facebook = models.URLField(max_length=200)
 
     class Meta:
         """Meta definition for Contact."""
@@ -24,12 +24,15 @@ class Contact(models.Model):
 class Message(models.Model):
     """Model definition for Message."""
 
-    name = models.CharField("Name", max_length=50)
-    email = models.EmailField("Email", max_length=254)
-    phone = models.CharField("Phone", max_length=50)
-    subject = models.CharField("Subject", max_length=50)
-    message = models.TextField("Message", max_length=500)
-    date = models.DateTimeField("Date", auto_now_add=True)
+    name = models.CharField(max_length=50)
+
+    email = models.EmailField(max_length=254)
+    phone = models.CharField(max_length=50)
+
+    subject = models.CharField(max_length=50)
+    message = models.TextField(max_length=500)
+
+    date = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         """Meta definition for Message."""

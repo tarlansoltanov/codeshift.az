@@ -1,7 +1,7 @@
 from django.shortcuts import HttpResponse
 from django.views.generic import TemplateView
 
-from server.apps.base.forms import MessageForm
+from server.apps.base.logic.forms import MessageForm
 from server.apps.portfolio.models import Project
 
 

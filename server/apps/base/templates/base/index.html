@@ -74,10 +74,12 @@
             <span class="sub-heading">{% trans 'RECENT PROJECTS' %}</span>
             <h2 class="heading mb-25">{% trans 'Our latest projects' %}</h2>
             <p>
-              {% trans 'Since 2015 we have been a visionary and a reliable software engineering partner for national brands.' %}
+              {% trans 'Since 2015 we have been a visionary and a reliable software engineering partner for national
+              brands.' %}
             </p>
           </div>
-          <a href="{% url 'portfolio:portfolio' %}" class="codeshift-btn mt-45">{% trans 'More Projects' %}<span></span></a>
+          <a href="{% url 'portfolio:portfolio' %}" class="codeshift-btn mt-45">{% trans 'More Projects'
+            %}<span></span></a>
         </div>
       </div>
       <div class="col-xl-8">
@@ -85,7 +87,7 @@
           <div class="row codeshift-project-grid mt-none-30">
             {% for item in projects %}
             <!-- Item -->
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 cat-{{ item.category.id }} mt-30 grid">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mt-30 grid">
               <div class="codeshift-project-item">
                 <div class="thumb">
                   <img class="home-project-img" src="{{ item.cover.url }}" alt="" />
