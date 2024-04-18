@@ -1,6 +1,7 @@
 services:
   app:
     image: codeshift.az:dev
+    container_name: codeshift_app_dev
     build:
       context: .
       dockerfile: ./docker/app/Dockerfile

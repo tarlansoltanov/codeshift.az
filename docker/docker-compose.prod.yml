@@ -1,6 +1,7 @@
 services:
   app:
     image: codeshift.az:prod
+    container_name: codeshift_app_prod
     build:
       context: .
       dockerfile: ./docker/app/Dockerfile
@@ -36,6 +37,7 @@ services:
 
   backup:
     image: backup
+    container_name: codeshift_backup
     build:
       context: .
       dockerfile: ./docker/backup/Dockerfile
